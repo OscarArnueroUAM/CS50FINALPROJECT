@@ -64,6 +64,12 @@
     <Compile Include="Formularios\RegEmpleadosFrm.Designer.cs">
       <DependentUpon>RegEmpleadosFrm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Formularios\TicketFrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\TicketFrm.Designer.cs">
+      <DependentUpon>TicketFrm.cs</DependentUpon>
+    </Compile>
     <Compile Include="MdiParentFrm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -71,6 +77,8 @@
       <DependentUpon>MdiParentFrm.cs</DependentUpon>
     </Compile>
     <Compile Include="Models\Roles.cs" />
+    <Compile Include="Models\Sesion.cs" />
+    <Compile Include="Models\Ticket.cs" />
     <Compile Include="Models\UserModel.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
