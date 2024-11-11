@@ -10,21 +10,11 @@ using System.Windows.Forms;
 
 namespace OctagonHelpdesk.Formularios
 {
-    public partial class LoginFrm : Form
+    public partial class Frame : Form
     {
-        public LoginFrm()
+        public Frame()
         {
             InitializeComponent();
-        }
-
-        private void btnlogin_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void LoginFrm_Load(object sender, EventArgs e)
-        {
-            
         }
     }
 }
