@@ -70,6 +70,12 @@
     <Compile Include="Formularios\RegEmpleadosFrm.Designer.cs">
       <DependentUpon>RegEmpleadosFrm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Formularios\RegTicketFrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\RegTicketFrm.Designer.cs">
+      <DependentUpon>RegTicketFrm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Formularios\TicketFrm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -99,6 +105,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\RegEmpleadosFrm.resx">
       <DependentUpon>RegEmpleadosFrm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\RegTicketFrm.resx">
+      <DependentUpon>RegTicketFrm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MdiParentFrm.resx">
       <DependentUpon>MdiParentFrm.cs</DependentUpon>
