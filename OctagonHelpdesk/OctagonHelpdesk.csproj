@@ -97,6 +97,9 @@
     <EmbeddedResource Include="Formularios\LoginFrm.resx">
       <DependentUpon>LoginFrm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\RegEmpleadosFrm.resx">
+      <DependentUpon>RegEmpleadosFrm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="MdiParentFrm.resx">
       <DependentUpon>MdiParentFrm.cs</DependentUpon>
     </EmbeddedResource>
