@@ -10,11 +10,23 @@ using System.Windows.Forms;
 
 namespace OctagonHelpdesk.Formularios
 {
-    public partial class RegTickets : Form
+    public partial class RegTickets : MetroFramework.Forms.MetroForm
     {
         public RegTickets()
         {
             InitializeComponent();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            
+
+        }
+
+        private void BtnCrearTicket_Click(object sender, EventArgs e)
+        {
+            TicketFrm ticketFrm = new TicketFrm();
+            ticketFrm.ShowDialog();
         }
     }
 }

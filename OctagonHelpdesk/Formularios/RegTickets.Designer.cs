@@ -28,37 +28,42 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.pnlTitleRegistroTicket = new System.Windows.Forms.Panel();
             this.pnlBusquedaTicket = new System.Windows.Forms.Panel();
+            this.BtnCrearTicket = new System.Windows.Forms.Button();
             this.pnlDgvRegTickets = new System.Windows.Forms.Panel();
             this.DgvRegTickets = new System.Windows.Forms.DataGridView();
+            this.pnlBusquedaTicket.SuspendLayout();
             this.pnlDgvRegTickets.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DgvRegTickets)).BeginInit();
             this.SuspendLayout();
             // 
-            // pnlTitleRegistroTicket
-            // 
-            this.pnlTitleRegistroTicket.Dock = System.Windows.Forms.DockStyle.Top;
-            this.pnlTitleRegistroTicket.Location = new System.Drawing.Point(0, 0);
-            this.pnlTitleRegistroTicket.Name = "pnlTitleRegistroTicket";
-            this.pnlTitleRegistroTicket.Size = new System.Drawing.Size(1069, 77);
-            this.pnlTitleRegistroTicket.TabIndex = 0;
-            // 
             // pnlBusquedaTicket
             // 
-            this.pnlBusquedaTicket.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pnlBusquedaTicket.Location = new System.Drawing.Point(0, 77);
+            this.pnlBusquedaTicket.Controls.Add(this.BtnCrearTicket);
+            this.pnlBusquedaTicket.Dock = System.Windows.Forms.DockStyle.Top;
+            this.pnlBusquedaTicket.Location = new System.Drawing.Point(20, 60);
             this.pnlBusquedaTicket.Name = "pnlBusquedaTicket";
-            this.pnlBusquedaTicket.Size = new System.Drawing.Size(1069, 644);
+            this.pnlBusquedaTicket.Size = new System.Drawing.Size(1029, 1449);
             this.pnlBusquedaTicket.TabIndex = 1;
+            // 
+            // BtnCrearTicket
+            // 
+            this.BtnCrearTicket.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
+            this.BtnCrearTicket.Location = new System.Drawing.Point(830, 16);
+            this.BtnCrearTicket.Name = "BtnCrearTicket";
+            this.BtnCrearTicket.Size = new System.Drawing.Size(149, 71);
+            this.BtnCrearTicket.TabIndex = 0;
+            this.BtnCrearTicket.Text = "Crear Ticket";
+            this.BtnCrearTicket.UseVisualStyleBackColor = true;
+            this.BtnCrearTicket.Click += new System.EventHandler(this.BtnCrearTicket_Click);
             // 
             // pnlDgvRegTickets
             // 
             this.pnlDgvRegTickets.Controls.Add(this.DgvRegTickets);
             this.pnlDgvRegTickets.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.pnlDgvRegTickets.Location = new System.Drawing.Point(0, 186);
+            this.pnlDgvRegTickets.Location = new System.Drawing.Point(20, 166);
             this.pnlDgvRegTickets.Name = "pnlDgvRegTickets";
-            this.pnlDgvRegTickets.Size = new System.Drawing.Size(1069, 535);
+            this.pnlDgvRegTickets.Size = new System.Drawing.Size(1029, 535);
             this.pnlDgvRegTickets.TabIndex = 2;
             // 
             // DgvRegTickets
@@ -72,7 +77,7 @@
             this.DgvRegTickets.Name = "DgvRegTickets";
             this.DgvRegTickets.ReadOnly = true;
             this.DgvRegTickets.RowHeadersWidth = 62;
-            this.DgvRegTickets.Size = new System.Drawing.Size(1069, 535);
+            this.DgvRegTickets.Size = new System.Drawing.Size(1029, 535);
             this.DgvRegTickets.TabIndex = 0;
             // 
             // RegTickets
@@ -82,9 +87,9 @@
             this.ClientSize = new System.Drawing.Size(1069, 721);
             this.Controls.Add(this.pnlDgvRegTickets);
             this.Controls.Add(this.pnlBusquedaTicket);
-            this.Controls.Add(this.pnlTitleRegistroTicket);
             this.Name = "RegTickets";
-            this.Text = "RegTickets";
+            this.Text = "Registro Tickets";
+            this.pnlBusquedaTicket.ResumeLayout(false);
             this.pnlDgvRegTickets.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.DgvRegTickets)).EndInit();
             this.ResumeLayout(false);
@@ -92,10 +97,9 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.Panel pnlTitleRegistroTicket;
         private System.Windows.Forms.Panel pnlBusquedaTicket;
         private System.Windows.Forms.Panel pnlDgvRegTickets;
         private System.Windows.Forms.DataGridView DgvRegTickets;
+        private System.Windows.Forms.Button BtnCrearTicket;
     }
 }
