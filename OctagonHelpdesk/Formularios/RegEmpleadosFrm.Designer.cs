@@ -49,7 +49,7 @@
             this.BtnCrearTicket.Name = "BtnCrearTicket";
             this.BtnCrearTicket.Size = new System.Drawing.Size(135, 61);
             this.BtnCrearTicket.TabIndex = 1;
-            this.BtnCrearTicket.Text = "Crear Ticket";
+            this.BtnCrearTicket.Text = "Crear Empleado";
             this.BtnCrearTicket.UseVisualStyleBackColor = true;
             // 
             // RegEmpleadosFrm
@@ -60,7 +60,7 @@
             this.Controls.Add(this.BtnCrearTicket);
             this.Controls.Add(this.dataGridView1);
             this.Name = "RegEmpleadosFrm";
-            this.Text = "Registro de Tickets";
+            this.Text = "Registro de Empleados";
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
 
