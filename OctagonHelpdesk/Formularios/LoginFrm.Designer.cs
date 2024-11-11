@@ -30,7 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(LoginFrm));
             this.btnlogin = new System.Windows.Forms.Button();
-            this.txbemail = new System.Windows.Forms.TextBox();
+            this.txbuser = new System.Windows.Forms.TextBox();
             this.txbpassword = new System.Windows.Forms.TextBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
@@ -57,14 +57,14 @@
             this.btnlogin.UseVisualStyleBackColor = true;
             this.btnlogin.Click += new System.EventHandler(this.btnlogin_Click);
             // 
-            // txbemail
+            // txbuser
             // 
-            this.txbemail.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txbemail.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txbemail.Location = new System.Drawing.Point(35, 96);
-            this.txbemail.Name = "txbemail";
-            this.txbemail.Size = new System.Drawing.Size(266, 22);
-            this.txbemail.TabIndex = 1;
+            this.txbuser.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txbuser.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txbuser.Location = new System.Drawing.Point(35, 96);
+            this.txbuser.Name = "txbuser";
+            this.txbuser.Size = new System.Drawing.Size(266, 22);
+            this.txbuser.TabIndex = 1;
             // 
             // txbpassword
             // 
@@ -98,7 +98,7 @@
             this.panel2.Controls.Add(this.label1);
             this.panel2.Controls.Add(this.txbpassword);
             this.panel2.Controls.Add(this.btnlogin);
-            this.panel2.Controls.Add(this.txbemail);
+            this.panel2.Controls.Add(this.txbuser);
             this.panel2.Location = new System.Drawing.Point(252, 0);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(352, 401);
@@ -203,7 +203,7 @@
         #endregion
         private System.Windows.Forms.Button btnlogin;
         private System.Windows.Forms.TextBox txbpassword;
-        private System.Windows.Forms.TextBox txbemail;
+        private System.Windows.Forms.TextBox txbuser;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label label4;

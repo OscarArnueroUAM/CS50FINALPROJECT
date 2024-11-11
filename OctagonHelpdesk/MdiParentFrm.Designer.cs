@@ -274,6 +274,7 @@
             this.MaximumSize = new System.Drawing.Size(1920, 1080);
             this.Name = "MdiParentFrm";
             this.Text = "MdiParentFrm";
+            this.Load += new System.EventHandler(this.On_Load);
             this.menuStrip.ResumeLayout(false);
             this.menuStrip.PerformLayout();
             this.statusStrip.ResumeLayout(false);

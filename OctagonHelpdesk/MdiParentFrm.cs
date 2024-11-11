@@ -7,13 +7,15 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using OctagonHelpdesk.Formularios;
+using OctagonHelpdesk.Models;
 
 namespace OctagonHelpdesk
 {
     public partial class MdiParentFrm : Form
     {
         private int childFormNumber = 0;
-
+        UserModel currentuser { get;set; }
         public MdiParentFrm()
         {
             InitializeComponent();
@@ -54,53 +56,18 @@ namespace OctagonHelpdesk
             this.Close();
         }
 
-        private void CutToolStripMenuItem_Click(object sender, EventArgs e)
+        private void On_Load(object sender, EventArgs e)
         {
-        }
-
-        private void CopyToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-        }
-
-        private void PasteToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-        }
-
-        private void ToolBarToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            toolStrip.Visible = toolBarToolStripMenuItem.Checked;
-        }
-
-        private void StatusBarToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            statusStrip.Visible = statusBarToolStripMenuItem.Checked;
-        }
-
-        private void CascadeToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            LayoutMdi(MdiLayout.Cascade);
-        }
-
-        private void TileVerticalToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            LayoutMdi(MdiLayout.TileVertical);
-        }
-
-        private void TileHorizontalToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            LayoutMdi(MdiLayout.TileHorizontal);
-        }
-
-        private void ArrangeIconsToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            LayoutMdi(MdiLayout.ArrangeIcons);
-        }
-
-        private void CloseAllToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            foreach (Form childForm in MdiChildren)
+            using (LoginFrm loginForm = new LoginFrm())
             {
-                childForm.Close();
+                if (!(loginForm.ShowDialog(this) == DialogResult.OK))
+                {
+                    this.Close();
+                }
+
+                currentuser = loginForm.CurrentUser;
+                MessageBox.Show(currentuser.Nombre);
+                
             }
         }
     }
