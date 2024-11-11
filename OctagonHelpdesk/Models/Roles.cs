@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace OctagonHelpdesk.Models
 {
-    internal class Roles
+    public class Roles
     {
         public int rolesid;
         public bool AdminPerms { get; set; }

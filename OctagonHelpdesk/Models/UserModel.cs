@@ -9,7 +9,7 @@ using OctagonHelpdesk.Services;
 
 namespace OctagonHelpdesk.Models
 {
-    internal class UserModel
+    public class UserModel
     {
         // Nota: si esta en ingles ignoralo
         // SI ESTA EN ESPAÑOL LEELO
