@@ -98,6 +98,7 @@
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Services\HelperPassword.cs" />
+    <Compile Include="Services\TicketServices.cs" />
     <Compile Include="Services\UserRolesService.cs" />
     <EmbeddedResource Include="Formularios\RegTickets.resx">
       <DependentUpon>RegTickets.cs</DependentUpon>
