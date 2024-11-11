@@ -24,7 +24,7 @@ namespace OctagonHelpdesk.Formularios
         {
             int empleadoID = Sesion.EmpleadoID;
             Ticket nuevoTicket = new Ticket(empleadoID);
-            txtCreadorPor.Text = nuevoTicket.CreadorPor.ToString();
+            //txtCreadorPor.Text = nuevoTicket.CreadorPor.ToString();
         }
 
         private void TicketFrm_Load(object sender, EventArgs e)
