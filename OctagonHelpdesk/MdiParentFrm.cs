@@ -118,5 +118,11 @@ namespace OctagonHelpdesk
                 regEmpleadosFrm.WindowState = FormWindowState.Maximized; // Luego lo maximiza
             }
         }
+
+        private void testToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Frame frame = new Frame();
+            frame.Show();
+        }
     }
 }

@@ -51,7 +51,7 @@
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
             this.pictureBox1.Location = new System.Drawing.Point(-3, -20);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(58, 398);
             this.pictureBox1.TabIndex = 0;
@@ -83,9 +83,9 @@
             this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Location = new System.Drawing.Point(66, 47);
-            this.groupBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(2);
             this.groupBox1.Size = new System.Drawing.Size(525, 309);
             this.groupBox1.TabIndex = 2;
             this.groupBox1.TabStop = false;
@@ -93,7 +93,7 @@
             // btnConfirmUserCreation
             // 
             this.btnConfirmUserCreation.Location = new System.Drawing.Point(218, 250);
-            this.btnConfirmUserCreation.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnConfirmUserCreation.Margin = new System.Windows.Forms.Padding(2);
             this.btnConfirmUserCreation.Name = "btnConfirmUserCreation";
             this.btnConfirmUserCreation.Size = new System.Drawing.Size(101, 31);
             this.btnConfirmUserCreation.TabIndex = 10;
@@ -103,7 +103,7 @@
             // tbIDEmpleado
             // 
             this.tbIDEmpleado.Location = new System.Drawing.Point(167, 24);
-            this.tbIDEmpleado.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tbIDEmpleado.Margin = new System.Windows.Forms.Padding(2);
             this.tbIDEmpleado.Name = "tbIDEmpleado";
             this.tbIDEmpleado.Size = new System.Drawing.Size(224, 20);
             this.tbIDEmpleado.TabIndex = 9;
@@ -111,7 +111,7 @@
             // tbNombre
             // 
             this.tbNombre.Location = new System.Drawing.Point(167, 68);
-            this.tbNombre.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tbNombre.Margin = new System.Windows.Forms.Padding(2);
             this.tbNombre.Name = "tbNombre";
             this.tbNombre.Size = new System.Drawing.Size(224, 20);
             this.tbNombre.TabIndex = 8;
@@ -119,7 +119,7 @@
             // tbEmail
             // 
             this.tbEmail.Location = new System.Drawing.Point(167, 112);
-            this.tbEmail.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tbEmail.Margin = new System.Windows.Forms.Padding(2);
             this.tbEmail.Name = "tbEmail";
             this.tbEmail.Size = new System.Drawing.Size(224, 20);
             this.tbEmail.TabIndex = 7;
@@ -127,7 +127,7 @@
             // tbDeptID
             // 
             this.tbDeptID.Location = new System.Drawing.Point(168, 156);
-            this.tbDeptID.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tbDeptID.Margin = new System.Windows.Forms.Padding(2);
             this.tbDeptID.Name = "tbDeptID";
             this.tbDeptID.Size = new System.Drawing.Size(224, 20);
             this.tbDeptID.TabIndex = 6;
@@ -147,7 +147,7 @@
             // 
             this.cbRoles.FormattingEnabled = true;
             this.cbRoles.Location = new System.Drawing.Point(167, 197);
-            this.cbRoles.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cbRoles.Margin = new System.Windows.Forms.Padding(2);
             this.cbRoles.Name = "cbRoles";
             this.cbRoles.Size = new System.Drawing.Size(224, 21);
             this.cbRoles.TabIndex = 4;
@@ -204,7 +204,7 @@
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.pictureBox1);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "CrearUsuarioForm";
             this.Text = "Crear Usuario";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
