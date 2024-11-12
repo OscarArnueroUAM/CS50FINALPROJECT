@@ -1,4 +1,5 @@
 ﻿using OctagonHelpdesk.Models;
+using OctagonHelpdesk.Services;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -13,18 +14,21 @@ namespace OctagonHelpdesk.Formularios
 {
     public partial class CmpTicketFrm : Form
     {
-        RegTicketFrm regTicketFrm = new RegTicketFrm();
+        
         public event Action<Ticket> TicketCreated;
+        private readonly TicketService ticketServiceLocal;
 
         public Ticket ticket = new Ticket();
-        public CmpTicketFrm()
+        public CmpTicketFrm(TicketService ticketService)
         {
             InitializeComponent();
+            ticketServiceLocal = ticketService;
         }
         private void btnSave_Click(object sender, EventArgs e)
         {
+            
             //Se tiene q autogenerar el ID del ticket
-            ticket.IDTicket = regTicketFrm.tickets.GetTickets().Count + 1;
+            ticket.IDTicket = ticketServiceLocal.AutogeneradorID();
             ticket.Subject = txtSubject.Text;
             ticket.Descripcion = txtDescription.Text;
             ticket.State = "Abierto";

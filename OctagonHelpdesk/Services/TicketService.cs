@@ -43,6 +43,14 @@ namespace OctagonHelpdesk.Services
         {
             return Tickets;
         }
+        public int AutogeneradorID()
+        {
+            if (Tickets.Count == 0)
+            {
+                return 1;
+            }
+            return Tickets.Last().IDTicket + 1;
+        }
 
     }
 }

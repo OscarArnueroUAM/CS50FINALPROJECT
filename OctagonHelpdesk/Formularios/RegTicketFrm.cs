@@ -25,7 +25,7 @@ namespace OctagonHelpdesk.Formularios
 
         private void BtnCreateTicket_Click(object sender, EventArgs e)
         {
-            CmpTicketFrm ticketFrm = new CmpTicketFrm();
+            CmpTicketFrm ticketFrm = new CmpTicketFrm(tickets);
             ticketFrm.TicketCreated += OnTicketCreated;
             ticketFrm.ShowDialog();
             MostrarTickets();
