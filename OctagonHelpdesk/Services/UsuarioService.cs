@@ -7,7 +7,7 @@ using OctagonHelpdesk.Models;
 
 namespace OctagonHelpdesk.Services
 {
-    internal class UsuarioService
+    public class UsuarioService
     {
         private List<UserModel> Usuarios = new List<UserModel>();
 
@@ -42,7 +42,7 @@ namespace OctagonHelpdesk.Services
         }
         public int FindPosition(int id)
         {
-            return Usuarios.FindIndex(x => x.IDUser == id);
+            return Usuarios.FindIndex(usuario => usuario.IDUser == id);
 
         }
 

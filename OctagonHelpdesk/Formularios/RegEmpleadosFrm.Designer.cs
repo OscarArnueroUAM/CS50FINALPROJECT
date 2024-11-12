@@ -28,29 +28,29 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.DgvRegEmpleados = new System.Windows.Forms.DataGridView();
+            this.DgvRegUsuarios = new System.Windows.Forms.DataGridView();
             this.BtnCrearEmpleado = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
-            ((System.ComponentModel.ISupportInitialize)(this.DgvRegEmpleados)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DgvRegUsuarios)).BeginInit();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
-            // DgvRegEmpleados
+            // DgvRegUsuarios
             // 
-            this.DgvRegEmpleados.AllowUserToAddRows = false;
-            this.DgvRegEmpleados.AllowUserToDeleteRows = false;
-            this.DgvRegEmpleados.AllowUserToOrderColumns = true;
-            this.DgvRegEmpleados.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.DgvRegEmpleados.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.DgvRegEmpleados.Location = new System.Drawing.Point(0, 0);
-            this.DgvRegEmpleados.Name = "DgvRegEmpleados";
-            this.DgvRegEmpleados.ReadOnly = true;
-            this.DgvRegEmpleados.RowHeadersWidth = 62;
-            this.DgvRegEmpleados.RowTemplate.Height = 28;
-            this.DgvRegEmpleados.Size = new System.Drawing.Size(838, 454);
-            this.DgvRegEmpleados.TabIndex = 0;
+            this.DgvRegUsuarios.AllowUserToAddRows = false;
+            this.DgvRegUsuarios.AllowUserToDeleteRows = false;
+            this.DgvRegUsuarios.AllowUserToOrderColumns = true;
+            this.DgvRegUsuarios.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.DgvRegUsuarios.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.DgvRegUsuarios.Location = new System.Drawing.Point(0, 0);
+            this.DgvRegUsuarios.Name = "DgvRegUsuarios";
+            this.DgvRegUsuarios.ReadOnly = true;
+            this.DgvRegUsuarios.RowHeadersWidth = 62;
+            this.DgvRegUsuarios.RowTemplate.Height = 28;
+            this.DgvRegUsuarios.Size = new System.Drawing.Size(838, 454);
+            this.DgvRegUsuarios.TabIndex = 0;
             // 
             // BtnCrearEmpleado
             // 
@@ -74,7 +74,7 @@
             // 
             // panel2
             // 
-            this.panel2.Controls.Add(this.DgvRegEmpleados);
+            this.panel2.Controls.Add(this.DgvRegUsuarios);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel2.Location = new System.Drawing.Point(0, 105);
             this.panel2.Name = "panel2";
@@ -90,7 +90,7 @@
             this.Controls.Add(this.panel1);
             this.Name = "RegEmpleadosFrm";
             this.Text = "Registro de Empleados";
-            ((System.ComponentModel.ISupportInitialize)(this.DgvRegEmpleados)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DgvRegUsuarios)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
             this.ResumeLayout(false);
@@ -99,7 +99,7 @@
 
         #endregion
 
-        private System.Windows.Forms.DataGridView DgvRegEmpleados;
+        private System.Windows.Forms.DataGridView DgvRegUsuarios;
         private System.Windows.Forms.Button BtnCrearEmpleado;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panel2;

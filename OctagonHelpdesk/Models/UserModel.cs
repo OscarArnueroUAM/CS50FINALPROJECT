@@ -26,6 +26,7 @@ namespace OctagonHelpdesk.Models
         public string Lastname { get; set; }
         public string Email { get; set; }
         public int IDDept { get; set; }
+        public DateTime CreationDate { get; set; }
 
 
         private string EncryptedPassword;
