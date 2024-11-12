@@ -8,7 +8,8 @@ namespace OctagonHelpdesk.Models
 {
     internal class Ticket
     {
-        public int TicketID { get; set; }
+        public int IDTicket { get; set; }
+        public bool ActiveState { get; set; }
         public int CreadorPor { get; private set; }
         public string Descripcion { get; set; }
         public DateTime FechaCreacion { get; set; }

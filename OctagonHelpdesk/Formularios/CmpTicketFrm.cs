@@ -49,7 +49,7 @@ namespace OctagonHelpdesk.Formularios
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(48, 125);
+            this.label2.Location = new System.Drawing.Point(65, 76);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(93, 20);
             this.label2.TabIndex = 1;
@@ -58,7 +58,7 @@ namespace OctagonHelpdesk.Formularios
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(48, 171);
+            this.label1.Location = new System.Drawing.Point(65, 122);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(64, 20);
             this.label1.TabIndex = 2;
@@ -67,7 +67,7 @@ namespace OctagonHelpdesk.Formularios
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(48, 213);
+            this.label3.Location = new System.Drawing.Point(65, 164);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(96, 20);
             this.label3.TabIndex = 3;
@@ -76,7 +76,7 @@ namespace OctagonHelpdesk.Formularios
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(48, 336);
+            this.label4.Location = new System.Drawing.Point(65, 287);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(64, 20);
             this.label4.TabIndex = 4;
@@ -85,7 +85,7 @@ namespace OctagonHelpdesk.Formularios
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(48, 388);
+            this.label5.Location = new System.Drawing.Point(65, 339);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(93, 20);
             this.label5.TabIndex = 5;
@@ -93,21 +93,21 @@ namespace OctagonHelpdesk.Formularios
             // 
             // txtCreatedBy
             // 
-            this.txtCreatedBy.Location = new System.Drawing.Point(175, 125);
+            this.txtCreatedBy.Location = new System.Drawing.Point(192, 76);
             this.txtCreatedBy.Name = "txtCreatedBy";
             this.txtCreatedBy.Size = new System.Drawing.Size(247, 26);
             this.txtCreatedBy.TabIndex = 6;
             // 
             // txtSubject
             // 
-            this.txtSubject.Location = new System.Drawing.Point(175, 171);
+            this.txtSubject.Location = new System.Drawing.Point(192, 122);
             this.txtSubject.Name = "txtSubject";
             this.txtSubject.Size = new System.Drawing.Size(247, 26);
             this.txtSubject.TabIndex = 7;
             // 
             // txtDescription
             // 
-            this.txtDescription.Location = new System.Drawing.Point(175, 213);
+            this.txtDescription.Location = new System.Drawing.Point(192, 164);
             this.txtDescription.Multiline = true;
             this.txtDescription.Name = "txtDescription";
             this.txtDescription.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
@@ -117,7 +117,7 @@ namespace OctagonHelpdesk.Formularios
             // cmbState
             // 
             this.cmbState.FormattingEnabled = true;
-            this.cmbState.Location = new System.Drawing.Point(175, 336);
+            this.cmbState.Location = new System.Drawing.Point(192, 287);
             this.cmbState.Name = "cmbState";
             this.cmbState.Size = new System.Drawing.Size(172, 28);
             this.cmbState.TabIndex = 9;
@@ -125,14 +125,14 @@ namespace OctagonHelpdesk.Formularios
             // cmbAsigned
             // 
             this.cmbAsigned.FormattingEnabled = true;
-            this.cmbAsigned.Location = new System.Drawing.Point(175, 388);
+            this.cmbAsigned.Location = new System.Drawing.Point(192, 339);
             this.cmbAsigned.Name = "cmbAsigned";
             this.cmbAsigned.Size = new System.Drawing.Size(172, 28);
             this.cmbAsigned.TabIndex = 10;
             // 
             // btnAgregar
             // 
-            this.btnAgregar.Location = new System.Drawing.Point(19, 497);
+            this.btnAgregar.Location = new System.Drawing.Point(36, 448);
             this.btnAgregar.Name = "btnAgregar";
             this.btnAgregar.Size = new System.Drawing.Size(151, 79);
             this.btnAgregar.TabIndex = 11;
@@ -141,7 +141,7 @@ namespace OctagonHelpdesk.Formularios
             // 
             // btnEditar
             // 
-            this.btnEditar.Location = new System.Drawing.Point(185, 497);
+            this.btnEditar.Location = new System.Drawing.Point(202, 448);
             this.btnEditar.Name = "btnEditar";
             this.btnEditar.Size = new System.Drawing.Size(151, 79);
             this.btnEditar.TabIndex = 12;
@@ -150,7 +150,7 @@ namespace OctagonHelpdesk.Formularios
             // 
             // btnEliminar
             // 
-            this.btnEliminar.Location = new System.Drawing.Point(374, 497);
+            this.btnEliminar.Location = new System.Drawing.Point(391, 448);
             this.btnEliminar.Name = "btnEliminar";
             this.btnEliminar.Size = new System.Drawing.Size(151, 79);
             this.btnEliminar.TabIndex = 13;
@@ -159,7 +159,7 @@ namespace OctagonHelpdesk.Formularios
             // 
             // CmpTicketFrm
             // 
-            this.ClientSize = new System.Drawing.Size(593, 635);
+            this.ClientSize = new System.Drawing.Size(577, 560);
             this.Controls.Add(this.btnEliminar);
             this.Controls.Add(this.btnEditar);
             this.Controls.Add(this.btnAgregar);
