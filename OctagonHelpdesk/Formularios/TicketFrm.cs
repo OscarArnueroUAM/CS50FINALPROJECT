@@ -11,7 +11,7 @@ using System.Windows.Forms;
 
 namespace TicketFrm
 {
-    public partial class TicketFrm : MetroFramework.Forms.MetroForm
+    public partial class TicketFrm : Form
     {
         public TicketFrm()
         {
