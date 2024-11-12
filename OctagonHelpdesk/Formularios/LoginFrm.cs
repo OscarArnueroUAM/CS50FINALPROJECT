@@ -36,7 +36,7 @@ namespace OctagonHelpdesk.Formularios
             {
 
                 CurrentUser = new UserModel { 
-                    Nombre = txbuser.Text,
+                    Name = txbuser.Text,
                     
                     
                 

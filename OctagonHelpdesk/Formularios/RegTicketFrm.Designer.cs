@@ -80,6 +80,7 @@
             this.DgvRegTickets.RowTemplate.Height = 28;
             this.DgvRegTickets.Size = new System.Drawing.Size(1157, 736);
             this.DgvRegTickets.TabIndex = 0;
+       
             // 
             // RegTicketFrm
             // 
