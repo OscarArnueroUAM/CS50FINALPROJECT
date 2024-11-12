@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using OctagonHelpdesk.Models;
 
 namespace OctagonHelpdesk
 {
@@ -14,9 +15,16 @@ namespace OctagonHelpdesk
     {
         bool sidebarexpand;
         bool ticketcollapsed;
+        //UserModel user { get; set; }
+        UserModel user = new UserModel();
         public Frame()
         {
             InitializeComponent();
+            user.Roles.AdminPerms = false;
+            if (!(user.Roles.AdminPerms))
+            {
+                containerhome.MaximumSize = new System.Drawing.Size(containerhome.MaximumSize.Width, 110);
+            }
         }
 
         private void Menu_Click(object sender, EventArgs e)
@@ -74,24 +82,40 @@ namespace OctagonHelpdesk
         {
             containerstimer.Start();
         }
+ 
+        
 
-        private void btnagregarticket_Click(object sender, EventArgs e)
-        {
-            
-           
-        }
-
-        private void pictureBox1_Click(object sender, EventArgs e)
-        {
-            btnagregarticket_Click(sender, e);
-        }
-
-        private void panel2_Paint(object sender, PaintEventArgs e)
+        private void btnagregarticket_Click_1(object sender, EventArgs e)
         {
 
         }
 
-        private void Frame_Load(object sender, EventArgs e)
+        private void addticketpicbx_Click(object sender, EventArgs e)
+        {
+            btnagregarticket_Click_1(sender, e);
+        }
+
+        private void btnverticket_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btneditartickets_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void verpicturebox_Click(object sender, EventArgs e)
+        {
+            btnverticket_Click(sender, e);
+        }
+
+        private void editpicturebox_Click(object sender, EventArgs e)
+        {
+            btneditartickets_Click(sender, e);
+        }
+
+        private void panelouter_Paint(object sender, PaintEventArgs e)
         {
 
         }
