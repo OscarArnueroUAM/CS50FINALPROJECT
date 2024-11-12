@@ -42,17 +42,16 @@
             this.panel1.Controls.Add(this.BtnCreateTicket);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(533, 62);
+            this.panel1.Size = new System.Drawing.Size(1157, 95);
             this.panel1.TabIndex = 0;
             // 
             // BtnCreateTicket
             // 
-            this.BtnCreateTicket.Location = new System.Drawing.Point(416, 8);
-            this.BtnCreateTicket.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.BtnCreateTicket.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.BtnCreateTicket.Location = new System.Drawing.Point(993, 12);
             this.BtnCreateTicket.Name = "BtnCreateTicket";
-            this.BtnCreateTicket.Size = new System.Drawing.Size(101, 40);
+            this.BtnCreateTicket.Size = new System.Drawing.Size(152, 62);
             this.BtnCreateTicket.TabIndex = 0;
             this.BtnCreateTicket.Text = "Crear Ticket";
             this.BtnCreateTicket.UseVisualStyleBackColor = true;
@@ -62,10 +61,9 @@
             // 
             this.panel2.Controls.Add(this.DgvRegTickets);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel2.Location = new System.Drawing.Point(0, 62);
-            this.panel2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel2.Location = new System.Drawing.Point(0, 95);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(533, 230);
+            this.panel2.Size = new System.Drawing.Size(1157, 736);
             this.panel2.TabIndex = 1;
             // 
             // DgvRegTickets
@@ -76,24 +74,23 @@
             this.DgvRegTickets.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.DgvRegTickets.Dock = System.Windows.Forms.DockStyle.Fill;
             this.DgvRegTickets.Location = new System.Drawing.Point(0, 0);
-            this.DgvRegTickets.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.DgvRegTickets.Name = "DgvRegTickets";
             this.DgvRegTickets.ReadOnly = true;
             this.DgvRegTickets.RowHeadersWidth = 62;
             this.DgvRegTickets.RowTemplate.Height = 28;
-            this.DgvRegTickets.Size = new System.Drawing.Size(533, 230);
+            this.DgvRegTickets.Size = new System.Drawing.Size(1157, 736);
             this.DgvRegTickets.TabIndex = 0;
             // 
             // RegTicketFrm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(533, 292);
+            this.ClientSize = new System.Drawing.Size(1157, 831);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "RegTicketFrm";
-            this.Text = "RegTicketFrm";
+            this.Text = "Registro de Tickets";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.panel1.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.DgvRegTickets)).EndInit();

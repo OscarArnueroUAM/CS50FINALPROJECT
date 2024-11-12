@@ -70,5 +70,54 @@ namespace OctagonHelpdesk
                 
             }
         }
+
+        
+        
+
+        private void ticketToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            RegTicketFrm regTicketFrm = Application.OpenForms.OfType<RegTicketFrm>().FirstOrDefault();
+            /*busca si ya existe una instancia de RegTicketFrm abierta. Si encuentra una, la asigna a regTicketFrm.*/
+
+            if (regTicketFrm != null)
+            {
+                // Si el formulario ya está abierto, lo trae al frente y lo maximiza
+                regTicketFrm.WindowState = FormWindowState.Maximized;
+                regTicketFrm.BringToFront();
+            }
+            else
+            {
+                // Si el formulario no está abierto, crea una nueva instancia
+                regTicketFrm = new RegTicketFrm();
+                regTicketFrm.MdiParent = this;
+                regTicketFrm.WindowState = FormWindowState.Minimized; // Minimiza el formulario inmediatamente
+                regTicketFrm.Show();
+                regTicketFrm.WindowState = FormWindowState.Maximized; // Luego lo maximiza
+            }
+
+        }
+
+        private void usuariosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+            // Verifica si el formulario ya está abierto
+            RegEmpleadosFrm regEmpleadosFrm = Application.OpenForms.OfType<RegEmpleadosFrm>().FirstOrDefault();
+
+            if (regEmpleadosFrm != null)
+            {
+                // Si el formulario ya está abierto, lo trae al frente y lo maximiza
+                regEmpleadosFrm.WindowState = FormWindowState.Maximized;
+                regEmpleadosFrm.BringToFront();
+            }
+            else
+            {
+                // Si el formulario no está abierto, crea una nueva instancia
+                regEmpleadosFrm = new RegEmpleadosFrm();
+                regEmpleadosFrm.MdiParent = this;
+                regEmpleadosFrm.WindowState = FormWindowState.Minimized; // Minimiza el formulario inmediatamente
+                regEmpleadosFrm.Show();
+                regEmpleadosFrm.WindowState = FormWindowState.Maximized; // Luego lo maximiza
+            }
+        }
     }
 }

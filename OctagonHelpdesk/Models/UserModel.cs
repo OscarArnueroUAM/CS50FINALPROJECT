@@ -11,16 +11,25 @@ namespace OctagonHelpdesk.Models
 {
     public class UserModel
     {
+        // Alicia: Nota: Cambie el orden de los atributos
+
+
         // Nota: si esta en ingles ignoralo
         // SI ESTA EN ESPAÑOL LEELO
         public int IDEmpleado { get; set; }
-        public string Nombre { get; set; }
-        public string Email { get; set; }
-        public int DeptID { get; set; }
+
+        //En vez de eliminar al empleado, solo se desactiva su Estado
+        public bool EstadoActivo = true;
+
         public Roles Roles;
+        public string Nombre { get; set; }
+        public string Apellido { get; set; }
+        public string Email { get; set; }
+        public int IDDept { get; set; }
+
 
         private string EncryptedPassword;
-       
+
         // Implementar UserRoles -M
 
         public UserModel()
@@ -42,7 +51,7 @@ namespace OctagonHelpdesk.Models
             {
                 EncryptedPassword = HelperPassword.HashPassword(password);
             }
- 
+
         }
 
         public bool ChecKPassword(string password)
@@ -51,7 +60,7 @@ namespace OctagonHelpdesk.Models
             return HelperPassword.VerifyPassword(password, EncryptedPassword);
         }
 
-        
+
 
 
 

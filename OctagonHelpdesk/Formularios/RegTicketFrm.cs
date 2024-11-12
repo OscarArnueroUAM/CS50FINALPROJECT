@@ -16,11 +16,13 @@ namespace OctagonHelpdesk.Formularios
         public RegTicketFrm()
         {
             InitializeComponent();
+            //this.currentUser = currentUser;
         }
 
         private void BtnCreateTicket_Click(object sender, EventArgs e)
         {
-            TicketFrm ticketFrm = new TicketFrm.TicketFrm();
+            CmpTicketFrm ticketFrm = new CmpTicketFrm();
+            ticketFrm.ShowDialog();
         }
     }
 }

@@ -30,38 +30,69 @@
         {
             this.DgvRegEmpleados = new System.Windows.Forms.DataGridView();
             this.BtnCrearEmpleado = new System.Windows.Forms.Button();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.panel2 = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.DgvRegEmpleados)).BeginInit();
+            this.panel1.SuspendLayout();
+            this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // DgvRegEmpleados
             // 
+            this.DgvRegEmpleados.AllowUserToAddRows = false;
+            this.DgvRegEmpleados.AllowUserToDeleteRows = false;
+            this.DgvRegEmpleados.AllowUserToOrderColumns = true;
             this.DgvRegEmpleados.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.DgvRegEmpleados.Location = new System.Drawing.Point(42, 137);
+            this.DgvRegEmpleados.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.DgvRegEmpleados.Location = new System.Drawing.Point(0, 0);
             this.DgvRegEmpleados.Name = "DgvRegEmpleados";
+            this.DgvRegEmpleados.ReadOnly = true;
             this.DgvRegEmpleados.RowHeadersWidth = 62;
             this.DgvRegEmpleados.RowTemplate.Height = 28;
-            this.DgvRegEmpleados.Size = new System.Drawing.Size(726, 294);
+            this.DgvRegEmpleados.Size = new System.Drawing.Size(838, 454);
             this.DgvRegEmpleados.TabIndex = 0;
             // 
             // BtnCrearEmpleado
             // 
-            this.BtnCrearEmpleado.Location = new System.Drawing.Point(633, 59);
+            this.BtnCrearEmpleado.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.BtnCrearEmpleado.Location = new System.Drawing.Point(680, 23);
             this.BtnCrearEmpleado.Name = "BtnCrearEmpleado";
             this.BtnCrearEmpleado.Size = new System.Drawing.Size(135, 61);
             this.BtnCrearEmpleado.TabIndex = 1;
             this.BtnCrearEmpleado.Text = "Crear Empleado";
             this.BtnCrearEmpleado.UseVisualStyleBackColor = true;
+            this.BtnCrearEmpleado.Click += new System.EventHandler(this.BtnCrearEmpleado_Click);
+            // 
+            // panel1
+            // 
+            this.panel1.Controls.Add(this.BtnCrearEmpleado);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(838, 105);
+            this.panel1.TabIndex = 2;
+            // 
+            // panel2
+            // 
+            this.panel2.Controls.Add(this.DgvRegEmpleados);
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel2.Location = new System.Drawing.Point(0, 105);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(838, 454);
+            this.panel2.TabIndex = 3;
             // 
             // RegEmpleadosFrm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.BtnCrearEmpleado);
-            this.Controls.Add(this.DgvRegEmpleados);
+            this.ClientSize = new System.Drawing.Size(838, 559);
+            this.Controls.Add(this.panel2);
+            this.Controls.Add(this.panel1);
             this.Name = "RegEmpleadosFrm";
             this.Text = "Registro de Empleados";
             ((System.ComponentModel.ISupportInitialize)(this.DgvRegEmpleados)).EndInit();
+            this.panel1.ResumeLayout(false);
+            this.panel2.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -70,5 +101,7 @@
 
         private System.Windows.Forms.DataGridView DgvRegEmpleados;
         private System.Windows.Forms.Button BtnCrearEmpleado;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Panel panel2;
     }
 }
