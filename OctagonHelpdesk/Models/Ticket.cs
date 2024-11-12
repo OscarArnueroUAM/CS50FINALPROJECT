@@ -6,16 +6,30 @@ using System.Threading.Tasks;
 
 namespace OctagonHelpdesk.Models
 {
-    internal class Ticket
+    public class Ticket
     {
-        public int TicketID { get; set; }
+        public int IDTicket { get; set; }
+        public bool ActiveState { get; set; }
         public int CreadorPor { get; private set; }
+        public string Subject { get; set; }
         public string Descripcion { get; set; }
         public DateTime FechaCreacion { get; set; }
+        public DateTime FechaCierre { get; set; }
+        public string State { get; set; }
+        public string AsignadoA { get; set; }
+
+
+
+
+        public Ticket()
+        {
+            FechaCreacion = DateTime.Now;
+        }
         public Ticket(int creadorPorID)
         {
             CreadorPor = creadorPorID;
             FechaCreacion = DateTime.Now;
+
         }
 
     }
