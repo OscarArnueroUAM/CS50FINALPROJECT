@@ -167,6 +167,7 @@
     <Content Include="Assets\stacked-waves-haikei%28720p%29.png" />
     <Content Include="Assets\stacked-waves-haikei.png" />
     <Content Include="Assets\wavebckg.jpg" />
+    <None Include="Resources\plus.png" />
     <None Include="Resources\menu%281%29.png" />
     <None Include="Resources\home.png" />
   </ItemGroup>

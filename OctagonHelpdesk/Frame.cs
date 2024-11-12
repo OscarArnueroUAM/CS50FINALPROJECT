@@ -13,19 +13,15 @@ namespace OctagonHelpdesk
     public partial class Frame : Form
     {
         bool sidebarexpand;
+        bool ticketcollapsed;
         public Frame()
         {
             InitializeComponent();
         }
 
-        private void panelouter_Paint(object sender, PaintEventArgs e)
+        private void Menu_Click(object sender, EventArgs e)
         {
-
-        }
-
-        private void homebtn_Click(object sender, EventArgs e)
-        {
-            MessageBox.Show("Home");
+            sidebartimer.Start();
         }
 
         private void sidebartimer_Tick(object sender, EventArgs e)
@@ -39,9 +35,9 @@ namespace OctagonHelpdesk
                     sidebartimer.Stop();
                 }
             }
-            else 
+            else
             {
-                panelouter.Width +=10;
+                panelouter.Width += 10;
                 if (panelouter.Width == panelouter.MaximumSize.Width)
                 {
                     sidebarexpand = true;
@@ -50,9 +46,54 @@ namespace OctagonHelpdesk
             }
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void containerstimer_Tick(object sender, EventArgs e)
         {
-            sidebartimer.Start();
+            if (ticketcollapsed)
+            {
+                containerhome.Height -= 10;
+                if (containerhome.Height == containerhome.MinimumSize.Height)
+                {
+                    ticketcollapsed = false;
+                    containerstimer.Stop();
+                }
+            }
+            else
+            {
+                containerhome.Height += 10;
+                if (containerhome.Height == containerhome.MaximumSize.Height)
+                {
+                    ticketcollapsed = true;
+                    containerstimer.Stop();
+                }
+            }
+        }
+
+
+
+        private void homebtn_Click(object sender, EventArgs e)
+        {
+            containerstimer.Start();
+        }
+
+        private void btnagregarticket_Click(object sender, EventArgs e)
+        {
+            
+           
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            btnagregarticket_Click(sender, e);
+        }
+
+        private void panel2_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void Frame_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }
