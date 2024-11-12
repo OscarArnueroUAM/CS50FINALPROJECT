@@ -16,5 +16,10 @@ namespace OctagonHelpdesk.Formularios
         {
             InitializeComponent();
         }
+
+        private void btnConfirmUserCreation_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

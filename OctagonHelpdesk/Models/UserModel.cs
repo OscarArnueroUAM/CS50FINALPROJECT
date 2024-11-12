@@ -16,10 +16,10 @@ namespace OctagonHelpdesk.Models
 
         // Nota: si esta en ingles ignoralo
         // SI ESTA EN ESPAÑOL LEELO
-        public int IDEmpleado { get; set; }
+        public int IDUser { get; set; }
 
         //En vez de eliminar al empleado, solo se desactiva su Estado
-        public bool ActiveStateU = true;
+        public bool ActiveStateU { get; set; }
 
         public Role Roles;
         public string Name { get; set; }

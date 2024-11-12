@@ -33,12 +33,12 @@
             this.label1 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.btnConfirmUserCreation = new System.Windows.Forms.Button();
-            this.tbIDEmpleado = new System.Windows.Forms.TextBox();
-            this.tbNombre = new System.Windows.Forms.TextBox();
+            this.tbIDUser = new System.Windows.Forms.TextBox();
+            this.tbName = new System.Windows.Forms.TextBox();
             this.tbEmail = new System.Windows.Forms.TextBox();
-            this.tbDeptID = new System.Windows.Forms.TextBox();
+            this.tbIDDept = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
-            this.cbRoles = new System.Windows.Forms.ComboBox();
+            this.cmbRole = new System.Windows.Forms.ComboBox();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -70,12 +70,12 @@
             // groupBox1
             // 
             this.groupBox1.Controls.Add(this.btnConfirmUserCreation);
-            this.groupBox1.Controls.Add(this.tbIDEmpleado);
-            this.groupBox1.Controls.Add(this.tbNombre);
+            this.groupBox1.Controls.Add(this.tbIDUser);
+            this.groupBox1.Controls.Add(this.tbName);
             this.groupBox1.Controls.Add(this.tbEmail);
-            this.groupBox1.Controls.Add(this.tbDeptID);
+            this.groupBox1.Controls.Add(this.tbIDDept);
             this.groupBox1.Controls.Add(this.label6);
-            this.groupBox1.Controls.Add(this.cbRoles);
+            this.groupBox1.Controls.Add(this.cmbRole);
             this.groupBox1.Controls.Add(this.label5);
             this.groupBox1.Controls.Add(this.label4);
             this.groupBox1.Controls.Add(this.label3);
@@ -94,20 +94,21 @@
             this.btnConfirmUserCreation.TabIndex = 10;
             this.btnConfirmUserCreation.Text = "Confirmar";
             this.btnConfirmUserCreation.UseVisualStyleBackColor = true;
+            this.btnConfirmUserCreation.Click += new System.EventHandler(this.btnConfirmUserCreation_Click);
             // 
-            // tbIDEmpleado
+            // tbIDUser
             // 
-            this.tbIDEmpleado.Location = new System.Drawing.Point(250, 37);
-            this.tbIDEmpleado.Name = "tbIDEmpleado";
-            this.tbIDEmpleado.Size = new System.Drawing.Size(334, 26);
-            this.tbIDEmpleado.TabIndex = 9;
+            this.tbIDUser.Location = new System.Drawing.Point(250, 37);
+            this.tbIDUser.Name = "tbIDUser";
+            this.tbIDUser.Size = new System.Drawing.Size(334, 26);
+            this.tbIDUser.TabIndex = 9;
             // 
-            // tbNombre
+            // tbName
             // 
-            this.tbNombre.Location = new System.Drawing.Point(250, 105);
-            this.tbNombre.Name = "tbNombre";
-            this.tbNombre.Size = new System.Drawing.Size(334, 26);
-            this.tbNombre.TabIndex = 8;
+            this.tbName.Location = new System.Drawing.Point(250, 105);
+            this.tbName.Name = "tbName";
+            this.tbName.Size = new System.Drawing.Size(334, 26);
+            this.tbName.TabIndex = 8;
             // 
             // tbEmail
             // 
@@ -116,12 +117,12 @@
             this.tbEmail.Size = new System.Drawing.Size(334, 26);
             this.tbEmail.TabIndex = 7;
             // 
-            // tbDeptID
+            // tbIDDept
             // 
-            this.tbDeptID.Location = new System.Drawing.Point(252, 240);
-            this.tbDeptID.Name = "tbDeptID";
-            this.tbDeptID.Size = new System.Drawing.Size(334, 26);
-            this.tbDeptID.TabIndex = 6;
+            this.tbIDDept.Location = new System.Drawing.Point(252, 240);
+            this.tbIDDept.Name = "tbIDDept";
+            this.tbIDDept.Size = new System.Drawing.Size(334, 26);
+            this.tbIDDept.TabIndex = 6;
             // 
             // label6
             // 
@@ -133,13 +134,13 @@
             this.label6.TabIndex = 5;
             this.label6.Text = "Rol:";
             // 
-            // cbRoles
+            // cmbRole
             // 
-            this.cbRoles.FormattingEnabled = true;
-            this.cbRoles.Location = new System.Drawing.Point(250, 303);
-            this.cbRoles.Name = "cbRoles";
-            this.cbRoles.Size = new System.Drawing.Size(334, 28);
-            this.cbRoles.TabIndex = 4;
+            this.cmbRole.FormattingEnabled = true;
+            this.cmbRole.Location = new System.Drawing.Point(250, 303);
+            this.cmbRole.Name = "cmbRole";
+            this.cmbRole.Size = new System.Drawing.Size(334, 28);
+            this.cmbRole.TabIndex = 4;
             // 
             // label5
             // 
@@ -209,11 +210,11 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.ComboBox cbRoles;
+        private System.Windows.Forms.ComboBox cmbRole;
         private System.Windows.Forms.Button btnConfirmUserCreation;
-        private System.Windows.Forms.TextBox tbIDEmpleado;
-        private System.Windows.Forms.TextBox tbNombre;
+        private System.Windows.Forms.TextBox tbIDUser;
+        private System.Windows.Forms.TextBox tbName;
         private System.Windows.Forms.TextBox tbEmail;
-        private System.Windows.Forms.TextBox tbDeptID;
+        private System.Windows.Forms.TextBox tbIDDept;
     }
 }
