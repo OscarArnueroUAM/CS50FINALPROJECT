@@ -29,9 +29,9 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
+            this.BtnCreateTicket = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
             this.DgvRegTickets = new System.Windows.Forms.DataGridView();
-            this.BtnCreateTicket = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DgvRegTickets)).BeginInit();
@@ -42,17 +42,30 @@
             this.panel1.Controls.Add(this.BtnCreateTicket);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(800, 96);
+            this.panel1.Size = new System.Drawing.Size(533, 62);
             this.panel1.TabIndex = 0;
+            // 
+            // BtnCreateTicket
+            // 
+            this.BtnCreateTicket.Location = new System.Drawing.Point(416, 8);
+            this.BtnCreateTicket.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.BtnCreateTicket.Name = "BtnCreateTicket";
+            this.BtnCreateTicket.Size = new System.Drawing.Size(101, 40);
+            this.BtnCreateTicket.TabIndex = 0;
+            this.BtnCreateTicket.Text = "Crear Ticket";
+            this.BtnCreateTicket.UseVisualStyleBackColor = true;
+            this.BtnCreateTicket.Click += new System.EventHandler(this.BtnCreateTicket_Click);
             // 
             // panel2
             // 
             this.panel2.Controls.Add(this.DgvRegTickets);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel2.Location = new System.Drawing.Point(0, 96);
+            this.panel2.Location = new System.Drawing.Point(0, 62);
+            this.panel2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(800, 354);
+            this.panel2.Size = new System.Drawing.Size(533, 230);
             this.panel2.TabIndex = 1;
             // 
             // DgvRegTickets
@@ -63,29 +76,22 @@
             this.DgvRegTickets.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.DgvRegTickets.Dock = System.Windows.Forms.DockStyle.Fill;
             this.DgvRegTickets.Location = new System.Drawing.Point(0, 0);
+            this.DgvRegTickets.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.DgvRegTickets.Name = "DgvRegTickets";
             this.DgvRegTickets.ReadOnly = true;
             this.DgvRegTickets.RowHeadersWidth = 62;
             this.DgvRegTickets.RowTemplate.Height = 28;
-            this.DgvRegTickets.Size = new System.Drawing.Size(800, 354);
+            this.DgvRegTickets.Size = new System.Drawing.Size(533, 230);
             this.DgvRegTickets.TabIndex = 0;
-            // 
-            // BtnCreateTicket
-            // 
-            this.BtnCreateTicket.Location = new System.Drawing.Point(624, 12);
-            this.BtnCreateTicket.Name = "BtnCreateTicket";
-            this.BtnCreateTicket.Size = new System.Drawing.Size(152, 61);
-            this.BtnCreateTicket.TabIndex = 0;
-            this.BtnCreateTicket.Text = "Crear Ticket";
-            this.BtnCreateTicket.UseVisualStyleBackColor = true;
             // 
             // RegTicketFrm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(533, 292);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "RegTicketFrm";
             this.Text = "RegTicketFrm";
             this.panel1.ResumeLayout(false);

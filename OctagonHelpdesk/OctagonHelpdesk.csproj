@@ -61,11 +61,11 @@
     <Compile Include="Formularios\CamposEmpleadoFrm.Designer.cs">
       <DependentUpon>CamposEmpleadoFrm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Formularios\TicketFrm.cs">
+    <Compile Include="Formularios\CmpTicketFrm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Formularios\TicketFrm.Designer.cs">
-      <DependentUpon>TicketFrm.cs</DependentUpon>
+    <Compile Include="Formularios\CmpTicketFrm.Designer.cs">
+      <DependentUpon>CmpTicketFrm.cs</DependentUpon>
     </Compile>
     <Compile Include="Formularios\Frame.cs">
       <SubType>Form</SubType>
@@ -85,17 +85,11 @@
     <Compile Include="Formularios\RegEmpleadosFrm.Designer.cs">
       <DependentUpon>RegEmpleadosFrm.cs</DependentUpon>
     </Compile>
-     <Compile Include="Formularios\RegTicketFrm.cs">
+    <Compile Include="Formularios\RegTicketFrm.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Formularios\RegTicketFrm.Designer.cs">
       <DependentUpon>RegTicketFrm.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Formularios\TicketFrm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Formularios\TicketFrm.Designer.cs">
-      <DependentUpon>TicketFrm.cs</DependentUpon>
     </Compile>
     <Compile Include="MdiParentFrm.cs">
       <SubType>Form</SubType>
@@ -112,8 +106,8 @@
     <Compile Include="Services\FileHelper.cs" />
     <Compile Include="Services\HelperPassword.cs" />
     <Compile Include="Services\UserRolesService.cs" />
-    <EmbeddedResource Include="Formularios\TicketFrm.resx">
-      <DependentUpon>TicketFrm.cs</DependentUpon>
+    <EmbeddedResource Include="Formularios\CmpTicketFrm.resx">
+      <DependentUpon>CmpTicketFrm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\Frame.resx">
       <DependentUpon>Frame.cs</DependentUpon>

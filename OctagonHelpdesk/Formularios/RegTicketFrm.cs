@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
+
 namespace OctagonHelpdesk.Formularios
 {
     public partial class RegTicketFrm : Form
@@ -15,6 +16,11 @@ namespace OctagonHelpdesk.Formularios
         public RegTicketFrm()
         {
             InitializeComponent();
+        }
+
+        private void BtnCreateTicket_Click(object sender, EventArgs e)
+        {
+            TicketFrm ticketFrm = new TicketFrm.TicketFrm();
         }
     }
 }
