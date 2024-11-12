@@ -36,10 +36,13 @@ namespace OctagonHelpdesk.Formularios
             {
 
                 CurrentUser = new UserModel { 
-                    Nombre = "bnanaanaanannanna"
+                    Nombre = txbuser.Text,
+                    
                     
                 
-                };  
+                };
+
+                CurrentUser.ChecKPassword(inputpassword);
 
 
 

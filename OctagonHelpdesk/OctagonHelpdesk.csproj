@@ -67,11 +67,11 @@
     <Compile Include="Formularios\CmpTicketFrm.Designer.cs">
       <DependentUpon>CmpTicketFrm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Formularios\Frame.cs">
+    <Compile Include="Formularios\CrearUsuarioForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Formularios\Frame.Designer.cs">
-      <DependentUpon>Frame.cs</DependentUpon>
+    <Compile Include="Formularios\CrearUsuarioForm.Designer.cs">
+      <DependentUpon>CrearUsuarioForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Formularios\LoginFrm.cs">
       <SubType>Form</SubType>
@@ -109,8 +109,8 @@
     <EmbeddedResource Include="Formularios\CmpTicketFrm.resx">
       <DependentUpon>CmpTicketFrm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Formularios\Frame.resx">
-      <DependentUpon>Frame.cs</DependentUpon>
+    <EmbeddedResource Include="Formularios\CrearUsuarioForm.resx">
+      <DependentUpon>CrearUsuarioForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\LoginFrm.resx">
       <DependentUpon>LoginFrm.cs</DependentUpon>
@@ -133,8 +133,6 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <None Include="Formularios\App.config" />
-    <None Include="Formularios\packages.config" />
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

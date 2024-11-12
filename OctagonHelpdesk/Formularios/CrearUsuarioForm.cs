@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace OctagonHelpdesk.Formularios
 {
-    public partial class Frame : Form
+    public partial class CrearUsuarioForm : Form
     {
-        public Frame()
+        public CrearUsuarioForm()
         {
             InitializeComponent();
         }
