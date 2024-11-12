@@ -107,6 +107,7 @@
     <Compile Include="Services\HelperPassword.cs" />
     <Compile Include="Services\TicketService.cs" />
     <Compile Include="Services\UserRolesService.cs" />
+    <Compile Include="Services\UsuarioService.cs" />
     <EmbeddedResource Include="Formularios\CmpTicketFrm.resx">
       <DependentUpon>CmpTicketFrm.cs</DependentUpon>
     </EmbeddedResource>
