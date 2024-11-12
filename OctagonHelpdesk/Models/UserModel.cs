@@ -19,11 +19,11 @@ namespace OctagonHelpdesk.Models
         public int IDEmpleado { get; set; }
 
         //En vez de eliminar al empleado, solo se desactiva su Estado
-        public bool EstadoActivo = true;
+        public bool ActiveStateU = true;
 
-        public Roles Roles;
-        public string Nombre { get; set; }
-        public string Apellido { get; set; }
+        public Role Roles;
+        public string Name { get; set; }
+        public string Lastname { get; set; }
         public string Email { get; set; }
         public int IDDept { get; set; }
 
@@ -34,7 +34,7 @@ namespace OctagonHelpdesk.Models
 
         public UserModel()
         {
-            Roles = new Roles();
+            Roles = new Role();
 
             //Mario: Logica basica es asi: en cuanto se crea el objeto y se le asignan las propiedades de un usuario existente
             // se busca entre donde esten almacenados los roles y se le asigna
@@ -59,12 +59,5 @@ namespace OctagonHelpdesk.Models
             //To do, Code a way Retrieve Hashed password from wherever we store it in and compare it -M
             return HelperPassword.VerifyPassword(password, EncryptedPassword);
         }
-
-
-
-
-
-
-
     }
 }

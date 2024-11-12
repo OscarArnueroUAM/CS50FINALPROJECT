@@ -6,11 +6,13 @@ using System.Threading.Tasks;
 
 namespace OctagonHelpdesk.Models
 {
-    public class Roles
+    public class Role
     {
-        public int rolesid;
+        public int IDRole;
+
+        public string RoleName;
         public bool AdminPerms { get; set; }
-        public bool ITperms { get; set; }
+        public bool ITPerms { get; set; }
         public bool BasicPerms { get; set; }
     }
 }

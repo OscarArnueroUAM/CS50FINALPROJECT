@@ -19,7 +19,7 @@ namespace OctagonHelpdesk.Formularios
 
         private void BtnCrearEmpleado_Click(object sender, EventArgs e)
         {
-            CamposEmpleadoFrm formEmpleado = new CamposEmpleadoFrm();
+            CrearUsuarioForm formEmpleado = new CrearUsuarioForm();
             formEmpleado.ShowDialog();
         }
     }

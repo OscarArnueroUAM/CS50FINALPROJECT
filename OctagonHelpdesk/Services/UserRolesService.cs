@@ -9,12 +9,12 @@ namespace OctagonHelpdesk.Services
 {
     internal class UserRolesService 
     {
-        public void AssignPerms(UserModel currentUser, UserModel targetUser,Roles assignedRoles)
+        public void AssignPerms(UserModel currentUser, UserModel targetUser,Role assignedRoles)
         {
             // Mario: To do, Retrieve Target User from whatever we use to mass store stuff
             if (currentUser.Roles.AdminPerms)
             {
-                targetUser.Roles.ITperms = assignedRoles.ITperms;
+                targetUser.Roles.ITPerms = assignedRoles.ITPerms;
                 targetUser.Roles.BasicPerms = assignedRoles.BasicPerms;
             }
         }
@@ -24,15 +24,15 @@ namespace OctagonHelpdesk.Services
         {
 
             // Mario: To do, Retrieve Target User from whatever we use to mass store stuff
-            Roles assignedRoles = new Roles();
+            Role assignedRoles = new Role();
 
             currentUser.Roles.BasicPerms = assignedRoles.BasicPerms;
-            currentUser.Roles.ITperms = assignedRoles.ITperms;
+            currentUser.Roles.ITPerms = assignedRoles.ITPerms;
            
         }
 
         //Mario: To Do, Enable Admins to create other admins
-        private void AdminSetter(UserModel CurrentUser, Roles AssignedRole, string AdminPasskey)
+        private void AdminSetter(UserModel CurrentUser, Role AssignedRole, string AdminPasskey)
         {
             string secretkey = "admin"; // Mario: To Do, DO NOT HARDCODE ADMIN PASSWORDS ON PRODUCTION VERSIONS
             if (CurrentUser.Roles.AdminPerms && AdminPasskey == secretkey)
