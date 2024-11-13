@@ -15,7 +15,7 @@ namespace OctagonHelpdesk.Formularios
     public partial class LoginFrm : Form
     {
         public bool submitted = false;
-        public UserModel CurrentUser { get; set; }
+        public UserModel CurrentUser { get;}
         public LoginFrm()
         {
             InitializeComponent();
@@ -27,32 +27,28 @@ namespace OctagonHelpdesk.Formularios
             // Get from db
             string userdb = "santaclus";
             string passwordb = "1234";
-
+            UsuarioService usuarioService = new UsuarioService();
 
             string inputuser = txbuser.Text;
             string inputpassword = txbpassword.Text;
+
             
-            if (!string.IsNullOrEmpty(txbuser.Text) && !string.IsNullOrEmpty(txbpassword.Text))
+
+            if ((!string.IsNullOrEmpty(txbuser.Text) && !string.IsNullOrEmpty(txbpassword.Text)) && usuarioService.CheckUser(inputuser, inputpassword))
             {
-
                 CurrentUser = new UserModel { 
-                    Name = txbuser.Text,
-                    
-                    
-                
+                    Name = txbuser.Text              
                 };
-
-                CurrentUser.ChecKPassword(inputpassword);
-
-
-
-
                 this.DialogResult = DialogResult.OK;
                 submitted = true;
                 this.Close();
-            } else
+            } else if(string.IsNullOrEmpty(txbuser.Text) || string.IsNullOrEmpty(txbpassword.Text))
             {
-                MessageBox.Show("Campos invalidos");
+                MessageBox.Show("Credenciales vacias");
+            }
+            else
+            {
+                MessageBox.Show("Credenciales invalidas");
             }
 
 
