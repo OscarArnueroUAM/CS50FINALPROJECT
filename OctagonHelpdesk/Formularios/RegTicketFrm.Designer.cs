@@ -28,42 +28,49 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel1 = new System.Windows.Forms.Panel();
             this.BtnCreateTicket = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
             this.DgvRegTickets = new System.Windows.Forms.DataGridView();
+            this.label6 = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DgvRegTickets)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
             // 
+            this.panel1.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
+            this.panel1.Controls.Add(this.label6);
             this.panel1.Controls.Add(this.BtnCreateTicket);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Location = new System.Drawing.Point(120, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1157, 95);
+            this.panel1.Size = new System.Drawing.Size(1037, 157);
             this.panel1.TabIndex = 0;
             // 
             // BtnCreateTicket
             // 
             this.BtnCreateTicket.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.BtnCreateTicket.Location = new System.Drawing.Point(993, 12);
+            this.BtnCreateTicket.BackColor = System.Drawing.Color.CornflowerBlue;
+            this.BtnCreateTicket.Location = new System.Drawing.Point(802, 59);
             this.BtnCreateTicket.Name = "BtnCreateTicket";
-            this.BtnCreateTicket.Size = new System.Drawing.Size(152, 62);
+            this.BtnCreateTicket.Size = new System.Drawing.Size(174, 65);
             this.BtnCreateTicket.TabIndex = 0;
             this.BtnCreateTicket.Text = "Crear Ticket";
-            this.BtnCreateTicket.UseVisualStyleBackColor = true;
+            this.BtnCreateTicket.UseVisualStyleBackColor = false;
             this.BtnCreateTicket.Click += new System.EventHandler(this.BtnCreateTicket_Click);
             // 
             // panel2
             // 
             this.panel2.Controls.Add(this.DgvRegTickets);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel2.Location = new System.Drawing.Point(0, 95);
+            this.panel2.Location = new System.Drawing.Point(120, 157);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1157, 736);
+            this.panel2.Size = new System.Drawing.Size(1037, 674);
             this.panel2.TabIndex = 1;
             // 
             // DgvRegTickets
@@ -71,6 +78,10 @@
             this.DgvRegTickets.AllowUserToAddRows = false;
             this.DgvRegTickets.AllowUserToDeleteRows = false;
             this.DgvRegTickets.AllowUserToOrderColumns = true;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            this.DgvRegTickets.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            this.DgvRegTickets.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.DgvRegTickets.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.DgvRegTickets.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.DgvRegTickets.Dock = System.Windows.Forms.DockStyle.Fill;
             this.DgvRegTickets.Location = new System.Drawing.Point(0, 0);
@@ -78,9 +89,30 @@
             this.DgvRegTickets.ReadOnly = true;
             this.DgvRegTickets.RowHeadersWidth = 62;
             this.DgvRegTickets.RowTemplate.Height = 28;
-            this.DgvRegTickets.Size = new System.Drawing.Size(1157, 736);
+            this.DgvRegTickets.Size = new System.Drawing.Size(1037, 674);
             this.DgvRegTickets.TabIndex = 0;
-       
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.BackColor = System.Drawing.Color.Transparent;
+            this.label6.Font = new System.Drawing.Font("Segoe UI", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(24, 34);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(357, 54);
+            this.label6.TabIndex = 17;
+            this.label6.Text = "Registro de Tickets";
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Left;
+            this.pictureBox1.Image = global::OctagonHelpdesk.Properties.Resources.wavebckg;
+            this.pictureBox1.Location = new System.Drawing.Point(0, 0);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(120, 831);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 18;
+            this.pictureBox1.TabStop = false;
             // 
             // RegTicketFrm
             // 
@@ -89,12 +121,15 @@
             this.ClientSize = new System.Drawing.Size(1157, 831);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
+            this.Controls.Add(this.pictureBox1);
             this.Name = "RegTicketFrm";
             this.Text = "Registro de Tickets";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             this.panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.DgvRegTickets)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -105,5 +140,7 @@
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Button BtnCreateTicket;
         private System.Windows.Forms.DataGridView DgvRegTickets;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Label label6;
     }
 }
