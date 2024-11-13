@@ -32,24 +32,26 @@ namespace OctagonHelpdesk.Formularios
             string inputuser = txbuser.Text;
             string inputpassword = txbpassword.Text;
 
-            
+            this.DialogResult = DialogResult.OK;
+            submitted = true;
+            this.Close();
 
-            if ((!string.IsNullOrEmpty(txbuser.Text) && !string.IsNullOrEmpty(txbpassword.Text)) && usuarioService.CheckUser(inputuser, inputpassword))
-            {
-                CurrentUser = new UserModel { 
-                    Name = txbuser.Text              
-                };
-                this.DialogResult = DialogResult.OK;
-                submitted = true;
-                this.Close();
-            } else if(string.IsNullOrEmpty(txbuser.Text) || string.IsNullOrEmpty(txbpassword.Text))
-            {
-                MessageBox.Show("Credenciales vacias");
-            }
-            else
-            {
-                MessageBox.Show("Credenciales invalidas");
-            }
+            //if ((!string.IsNullOrEmpty(txbuser.Text) && !string.IsNullOrEmpty(txbpassword.Text)) && usuarioService.CheckUser(inputuser, inputpassword))
+            //{
+            //    CurrentUser = new UserModel { 
+            //        Name = txbuser.Text              
+            //    };
+            //    this.DialogResult = DialogResult.OK;
+            //    submitted = true;
+            //    this.Close();
+            //} else if(string.IsNullOrEmpty(txbuser.Text) || string.IsNullOrEmpty(txbpassword.Text))
+            //{
+            //    MessageBox.Show("Credenciales vacias");
+            //}
+            //else
+            //{
+            //    MessageBox.Show("Credenciales invalidas");
+            //}
 
 
         }
