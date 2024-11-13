@@ -57,8 +57,15 @@ namespace OctagonHelpdesk.Models
 
         public bool ChecKPassword(string password)
         {
-            //To do, Code a way Retrieve Hashed password from wherever we store it in and compare it -M
             return HelperPassword.VerifyPassword(password, EncryptedPassword);
+        }
+
+
+        public void MassFill(int IDuser,bool state, string password)
+        {
+            this.IDUser = IDuser;
+            this.ActiveStateU = state;
+            this.SetPassword(password,true);
         }
     }
 }
