@@ -14,8 +14,10 @@ namespace OctagonHelpdesk.Formularios
 {
     public partial class CrearUsuarioForm : Form
     {
+
         public event Action<UserModel> UsuarioCreated;
         private readonly UsuarioService usuarioServiceLocal;
+
         public UserModel usuario = new UserModel();
         public CrearUsuarioForm(UsuarioService usuarioService)
         {
