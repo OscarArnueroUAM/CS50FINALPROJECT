@@ -55,28 +55,28 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Formularios\CmpTicketFrm.cs">
+    <Compile Include="Formularios\Catalogos\CmpTicketFrm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Formularios\CmpTicketFrm.Designer.cs">
+    <Compile Include="Formularios\Catalogos\CmpTicketFrm.Designer.cs">
       <DependentUpon>CmpTicketFrm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Formularios\CrearUsuarioForm.cs">
+    <Compile Include="Formularios\Catalogos\CrearUsuarioForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Formularios\CrearUsuarioForm.Designer.cs">
+    <Compile Include="Formularios\Catalogos\CrearUsuarioForm.Designer.cs">
       <DependentUpon>CrearUsuarioForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Formularios\FrmDept.cs">
+    <Compile Include="Formularios\Catalogos\FrmDept.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Formularios\FrmDept.Designer.cs">
+    <Compile Include="Formularios\Catalogos\FrmDept.Designer.cs">
       <DependentUpon>FrmDept.cs</DependentUpon>
     </Compile>
-    <Compile Include="Formularios\FrmRoles.cs">
+    <Compile Include="Formularios\Catalogos\FrmRoles.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Formularios\FrmRoles.Designer.cs">
+    <Compile Include="Formularios\Catalogos\FrmRoles.Designer.cs">
       <DependentUpon>FrmRoles.cs</DependentUpon>
     </Compile>
     <Compile Include="Formularios\LoginFrm.cs">
@@ -85,16 +85,16 @@
     <Compile Include="Formularios\LoginFrm.Designer.cs">
       <DependentUpon>LoginFrm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Formularios\RegEmpleadosFrm.cs">
+    <Compile Include="Formularios\Registros\RegEmpleadosFrm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Formularios\RegEmpleadosFrm.Designer.cs">
+    <Compile Include="Formularios\Registros\RegEmpleadosFrm.Designer.cs">
       <DependentUpon>RegEmpleadosFrm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Formularios\RegTicketFrm.cs">
+    <Compile Include="Formularios\Registros\RegTicketFrm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Formularios\RegTicketFrm.Designer.cs">
+    <Compile Include="Formularios\Registros\RegTicketFrm.Designer.cs">
       <DependentUpon>RegTicketFrm.cs</DependentUpon>
     </Compile>
     <Compile Include="Frame.cs">
@@ -120,25 +120,25 @@
     <Compile Include="Services\TicketService.cs" />
     <Compile Include="Services\UserRolesService.cs" />
     <Compile Include="Services\UsuarioService.cs" />
-    <EmbeddedResource Include="Formularios\CmpTicketFrm.resx">
+    <EmbeddedResource Include="Formularios\Catalogos\CmpTicketFrm.resx">
       <DependentUpon>CmpTicketFrm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Formularios\CrearUsuarioForm.resx">
+    <EmbeddedResource Include="Formularios\Catalogos\CrearUsuarioForm.resx">
       <DependentUpon>CrearUsuarioForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Formularios\FrmDept.resx">
+    <EmbeddedResource Include="Formularios\Catalogos\FrmDept.resx">
       <DependentUpon>FrmDept.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Formularios\FrmRoles.resx">
+    <EmbeddedResource Include="Formularios\Catalogos\FrmRoles.resx">
       <DependentUpon>FrmRoles.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\LoginFrm.resx">
       <DependentUpon>LoginFrm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Formularios\RegEmpleadosFrm.resx">
+    <EmbeddedResource Include="Formularios\Registros\RegEmpleadosFrm.resx">
       <DependentUpon>RegEmpleadosFrm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Formularios\RegTicketFrm.resx">
+    <EmbeddedResource Include="Formularios\Registros\RegTicketFrm.resx">
       <DependentUpon>RegTicketFrm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Frame.resx">
