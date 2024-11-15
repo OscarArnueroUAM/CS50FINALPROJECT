@@ -66,7 +66,7 @@ namespace OctagonHelpdesk
                 }
 
                 currentuser = loginForm.CurrentUser;
-                
+
             }
         }
 

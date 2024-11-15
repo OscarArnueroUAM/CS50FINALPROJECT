@@ -20,8 +20,9 @@ namespace OctagonHelpdesk.Services
         //Para eliminar, busco su posicion y solo desactivo o inhabilito el estado del ticket
         public void RemoveTicket(Ticket ticket)
         {
-            int position = FindPosition(ticket.IDTicket);
-            Tickets[position].ActiveState = false;
+            //int position = FindPosition(ticket.IDTicket);
+            //Tickets[position].ActiveState = false;
+            Tickets.Remove(ticket);
         }
         
         //Para actualizar, busco la posición del ticket y lo actualizo

@@ -38,12 +38,12 @@
             this.cmbState = new System.Windows.Forms.ComboBox();
             this.cmbAsigned = new System.Windows.Forms.ComboBox();
             this.btnSave = new System.Windows.Forms.Button();
-            this.btnDelete = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.label6 = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.btnAttachments = new System.Windows.Forms.Button();
             this.cmbPriority = new System.Windows.Forms.ComboBox();
             this.label7 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -147,7 +147,7 @@
             // btnSave
             // 
             this.btnSave.BackColor = System.Drawing.Color.CornflowerBlue;
-            this.btnSave.Location = new System.Drawing.Point(105, 413);
+            this.btnSave.Location = new System.Drawing.Point(254, 475);
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(146, 54);
             this.btnSave.TabIndex = 11;
@@ -155,23 +155,13 @@
             this.btnSave.UseVisualStyleBackColor = false;
             this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
-            // btnDelete
-            // 
-            this.btnDelete.BackColor = System.Drawing.Color.CornflowerBlue;
-            this.btnDelete.Location = new System.Drawing.Point(398, 413);
-            this.btnDelete.Name = "btnDelete";
-            this.btnDelete.Size = new System.Drawing.Size(146, 54);
-            this.btnDelete.TabIndex = 13;
-            this.btnDelete.Text = "Eliminar";
-            this.btnDelete.UseVisualStyleBackColor = false;
-            // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
+            this.panel1.Controls.Add(this.btnAttachments);
             this.panel1.Controls.Add(this.cmbPriority);
             this.panel1.Controls.Add(this.label7);
             this.panel1.Controls.Add(this.txtCreatedBy);
-            this.panel1.Controls.Add(this.btnDelete);
             this.panel1.Controls.Add(this.btnSave);
             this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.cmbAsigned);
@@ -184,8 +174,37 @@
             this.panel1.Controls.Add(this.label5);
             this.panel1.Location = new System.Drawing.Point(188, 93);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(672, 499);
+            this.panel1.Size = new System.Drawing.Size(672, 559);
             this.panel1.TabIndex = 14;
+            // 
+            // btnAttachments
+            // 
+            this.btnAttachments.BackColor = System.Drawing.SystemColors.InactiveCaption;
+            this.btnAttachments.Image = global::OctagonHelpdesk.Properties.Resources.adjuntar_archivo;
+            this.btnAttachments.Location = new System.Drawing.Point(58, 399);
+            this.btnAttachments.Name = "btnAttachments";
+            this.btnAttachments.Size = new System.Drawing.Size(55, 46);
+            this.btnAttachments.TabIndex = 16;
+            this.btnAttachments.UseVisualStyleBackColor = false;
+            // 
+            // cmbPriority
+            // 
+            this.cmbPriority.BackColor = System.Drawing.SystemColors.InactiveBorder;
+            this.cmbPriority.FormattingEnabled = true;
+            this.cmbPriority.Location = new System.Drawing.Point(198, 230);
+            this.cmbPriority.Name = "cmbPriority";
+            this.cmbPriority.Size = new System.Drawing.Size(167, 29);
+            this.cmbPriority.TabIndex = 15;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Segoe UI", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Location = new System.Drawing.Point(51, 232);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(77, 21);
+            this.label7.TabIndex = 14;
+            this.label7.Text = "Prioridad:";
             // 
             // label6
             // 
@@ -204,34 +223,15 @@
             this.pictureBox1.Image = global::OctagonHelpdesk.Properties.Resources.wavebckg;
             this.pictureBox1.Location = new System.Drawing.Point(0, 0);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(132, 604);
+            this.pictureBox1.Size = new System.Drawing.Size(132, 664);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 17;
             this.pictureBox1.TabStop = false;
             // 
-            // cmbPriority
-            // 
-            this.cmbPriority.BackColor = System.Drawing.SystemColors.InactiveBorder;
-            this.cmbPriority.FormattingEnabled = true;
-            this.cmbPriority.Location = new System.Drawing.Point(198, 230);
-            this.cmbPriority.Name = "cmbPriority";
-            this.cmbPriority.Size = new System.Drawing.Size(167, 29);
-            this.cmbPriority.TabIndex = 15;
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Segoe UI", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(51, 232);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(116, 32);
-            this.label7.TabIndex = 14;
-            this.label7.Text = "Prioridad:";
-            // 
             // CmpTicketFrm
             // 
             this.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
-            this.ClientSize = new System.Drawing.Size(906, 604);
+            this.ClientSize = new System.Drawing.Size(906, 664);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.panel1);
@@ -258,11 +258,11 @@
         private System.Windows.Forms.ComboBox cmbState;
         private System.Windows.Forms.ComboBox cmbAsigned;
         private System.Windows.Forms.Button btnSave;
-        private System.Windows.Forms.Button btnDelete;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.ComboBox cmbPriority;
         private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Button btnAttachments;
     }
 }

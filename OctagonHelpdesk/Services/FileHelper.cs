@@ -54,7 +54,7 @@ namespace OctagonHelpdesk.Services
                         userModel.Name = lector.ReadString();
                         userModel.Lastname = lector.ReadString();
                         userModel.Email = lector.ReadString();
-                        userModel.IDDept = lector.ReadInt32();
+                        //userModel.IDDept = lector.ReadInt32();   
                         string fechaComoCadena = lector.ReadString();
                         userModel.CreationDate = DateTime.ParseExact(fechaComoCadena, "dd/MM/yyyy", CultureInfo.InvariantCulture);
                         
