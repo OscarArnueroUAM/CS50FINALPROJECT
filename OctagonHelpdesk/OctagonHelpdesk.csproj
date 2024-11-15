@@ -109,6 +109,7 @@
     <Compile Include="MdiParentFrm.Designer.cs">
       <DependentUpon>MdiParentFrm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Models\Enum\Departamentos.cs" />
     <Compile Include="Models\Role.cs" />
     <Compile Include="Models\Sesion.cs" />
     <Compile Include="Models\Ticket.cs" />
