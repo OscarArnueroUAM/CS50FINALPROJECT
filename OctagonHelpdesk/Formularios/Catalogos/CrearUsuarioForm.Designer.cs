@@ -45,6 +45,8 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
+            this.tbLastname = new System.Windows.Forms.TextBox();
+            this.label7 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
@@ -72,6 +74,8 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.tbLastname);
+            this.groupBox1.Controls.Add(this.label7);
             this.groupBox1.Controls.Add(this.cmbDepartamento);
             this.groupBox1.Controls.Add(this.cbEmpleado);
             this.groupBox1.Controls.Add(this.cbIT);
@@ -94,7 +98,7 @@
             // cmbDepartamento
             // 
             this.cmbDepartamento.FormattingEnabled = true;
-            this.cmbDepartamento.Location = new System.Drawing.Point(282, 241);
+            this.cmbDepartamento.Location = new System.Drawing.Point(282, 280);
             this.cmbDepartamento.Name = "cmbDepartamento";
             this.cmbDepartamento.Size = new System.Drawing.Size(135, 28);
             this.cmbDepartamento.TabIndex = 14;
@@ -103,7 +107,7 @@
             // cbEmpleado
             // 
             this.cbEmpleado.AutoSize = true;
-            this.cbEmpleado.Location = new System.Drawing.Point(509, 306);
+            this.cbEmpleado.Location = new System.Drawing.Point(509, 345);
             this.cbEmpleado.Name = "cbEmpleado";
             this.cbEmpleado.Size = new System.Drawing.Size(107, 24);
             this.cbEmpleado.TabIndex = 13;
@@ -113,7 +117,7 @@
             // cbIT
             // 
             this.cbIT.AutoSize = true;
-            this.cbIT.Location = new System.Drawing.Point(382, 306);
+            this.cbIT.Location = new System.Drawing.Point(382, 345);
             this.cbIT.Name = "cbIT";
             this.cbIT.Size = new System.Drawing.Size(108, 24);
             this.cbIT.TabIndex = 12;
@@ -123,7 +127,7 @@
             // cbAdmin
             // 
             this.cbAdmin.AutoSize = true;
-            this.cbAdmin.Location = new System.Drawing.Point(282, 306);
+            this.cbAdmin.Location = new System.Drawing.Point(282, 345);
             this.cbAdmin.Name = "cbAdmin";
             this.cbAdmin.Size = new System.Drawing.Size(80, 24);
             this.cbAdmin.TabIndex = 11;
@@ -133,7 +137,7 @@
             // btnConfirmUserCreation
             // 
             this.btnConfirmUserCreation.BackColor = System.Drawing.Color.CornflowerBlue;
-            this.btnConfirmUserCreation.Location = new System.Drawing.Point(307, 388);
+            this.btnConfirmUserCreation.Location = new System.Drawing.Point(303, 391);
             this.btnConfirmUserCreation.Name = "btnConfirmUserCreation";
             this.btnConfirmUserCreation.Size = new System.Drawing.Size(168, 66);
             this.btnConfirmUserCreation.TabIndex = 10;
@@ -152,7 +156,7 @@
             // tbName
             // 
             this.tbName.BackColor = System.Drawing.SystemColors.InactiveBorder;
-            this.tbName.Location = new System.Drawing.Point(282, 105);
+            this.tbName.Location = new System.Drawing.Point(282, 94);
             this.tbName.Name = "tbName";
             this.tbName.Size = new System.Drawing.Size(334, 26);
             this.tbName.TabIndex = 2;
@@ -160,7 +164,7 @@
             // tbEmail
             // 
             this.tbEmail.BackColor = System.Drawing.SystemColors.InactiveBorder;
-            this.tbEmail.Location = new System.Drawing.Point(282, 175);
+            this.tbEmail.Location = new System.Drawing.Point(282, 214);
             this.tbEmail.Name = "tbEmail";
             this.tbEmail.Size = new System.Drawing.Size(334, 26);
             this.tbEmail.TabIndex = 3;
@@ -169,7 +173,7 @@
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Segoe UI", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(177, 298);
+            this.label6.Location = new System.Drawing.Point(177, 337);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(76, 21);
             this.label6.TabIndex = 5;
@@ -179,7 +183,7 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Segoe UI", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(149, 243);
+            this.label5.Location = new System.Drawing.Point(149, 282);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(113, 21);
             this.label5.TabIndex = 3;
@@ -189,7 +193,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Segoe UI", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(201, 175);
+            this.label4.Location = new System.Drawing.Point(201, 214);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(48, 21);
             this.label4.TabIndex = 2;
@@ -199,7 +203,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Segoe UI", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(177, 105);
+            this.label3.Location = new System.Drawing.Point(177, 94);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(71, 21);
             this.label3.TabIndex = 1;
@@ -214,6 +218,24 @@
             this.label2.Size = new System.Drawing.Size(122, 21);
             this.label2.TabIndex = 0;
             this.label2.Text = "ID de empleado:";
+            // 
+            // tbLastname
+            // 
+            this.tbLastname.BackColor = System.Drawing.SystemColors.InactiveBorder;
+            this.tbLastname.Location = new System.Drawing.Point(282, 159);
+            this.tbLastname.Name = "tbLastname";
+            this.tbLastname.Size = new System.Drawing.Size(334, 26);
+            this.tbLastname.TabIndex = 16;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Segoe UI", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Location = new System.Drawing.Point(177, 159);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(105, 32);
+            this.label7.TabIndex = 15;
+            this.label7.Text = "Apellido:";
             // 
             // CrearUsuarioForm
             // 
@@ -253,5 +275,7 @@
         private System.Windows.Forms.CheckBox cbEmpleado;
         private System.Windows.Forms.CheckBox cbIT;
         private System.Windows.Forms.CheckBox cbAdmin;
+        private System.Windows.Forms.TextBox tbLastname;
+        private System.Windows.Forms.Label label7;
     }
 }

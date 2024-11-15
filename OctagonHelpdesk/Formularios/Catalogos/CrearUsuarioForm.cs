@@ -29,17 +29,44 @@ namespace OctagonHelpdesk.Formularios
 
         private void btnConfirmUserCreation_Click(object sender, EventArgs e)
         {
+            bool usuarioValid = false;
+            string name = tbName.Text;
+            string lastname = tbLastname.Text;
+            string email = tbEmail.Text;
+            if (string.IsNullOrEmpty(name) || string.IsNullOrEmpty(lastname) || string.IsNullOrEmpty(email) || cmbDepartamento.SelectedIndex == -1)
+            {
+                MessageBox.Show("Por favor, llene todos los campos");
+                return;
+
+            }
+            else
+            {
+                usuario.IDUser = usuarioServiceLocal.AutogeneradorID();
+                usuario.Name = name;
+                usuario.Lastname = lastname;
+                usuario.Email = email;
+
+
+                usuario.CreationDate = DateTime.Now;
+                usuario.ActiveStateU = true;
+                usuario.Departamento = (Departament)cmbDepartamento.SelectedItem;
+                usuarioValid = true;
+
+            }
             // Se tiene que autogenerar el ID del usuario
-            usuario.IDUser = usuarioServiceLocal.AutogeneradorID();
-            usuario.Name = tbName.Text;
-            usuario.Email = tbEmail.Text;
-            usuario.CreationDate = DateTime.Now;
-            usuario.ActiveStateU = true;
-            usuario.Departamento = (Departament)cmbDepartamento.SelectedItem;
 
-            UsuarioCreated?.Invoke(usuario);
+            if (usuarioValid)
+            {
+                UsuarioCreated?.Invoke(usuario);
 
-            this.Close();
+                this.Close();
+
+            }
+            else
+            {
+                MessageBox.Show("Algo anda mal, intentelo mas tarde");
+            }
+
 
         }
 
@@ -53,6 +80,8 @@ namespace OctagonHelpdesk.Formularios
             cmbDepartamento.Items.Clear();
             cmbDepartamento.SelectedIndex = -1;
             cmbDepartamento.DataSource = Enum.GetValues(typeof(Departament));
+
+            tbIDUser.Enabled = false;
         }
     }
 }

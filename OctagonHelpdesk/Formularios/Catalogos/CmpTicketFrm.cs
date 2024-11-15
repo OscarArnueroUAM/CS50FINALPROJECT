@@ -15,7 +15,7 @@ namespace OctagonHelpdesk.Formularios
 {
     public partial class CmpTicketFrm : Form
     {
-        
+
         public event Action<Ticket> TicketCreated;
         private readonly TicketService ticketServiceLocal;
 
@@ -27,26 +27,53 @@ namespace OctagonHelpdesk.Formularios
         }
         private void btnSave_Click(object sender, EventArgs e)
         {
+            bool ticketValid = false;
+
+            string subject = txtSubject.Text;
+            string description = txtDescription.Text;
             
-            //Se tiene q autogenerar el ID del ticket
-            ticket.IDTicket = ticketServiceLocal.AutogeneradorID();
-            ticket.Subject = txtSubject.Text;
-            ticket.Descripcion = txtDescription.Text;
-            ticket.StateProcess = cmbState.SelectedItem != null ? (State)cmbState.SelectedItem : State.Creado;
-            ticket.ActiveState = true;
-            ticket.FechaCreacion = DateTime.Now;
-            ticket.Prioridad = cmbPriority.SelectedItem != null ? (Priority)cmbPriority.SelectedItem : Priority.Baja;
-            ticket.AsignadoA = "Sin Asignar";
-            if (ticket.StateProcess == State.Cerrado)
+            if (string.IsNullOrEmpty(subject) || string.IsNullOrEmpty(description))
             {
-                ticket.FechaCierre = DateTime.Now;
+                MessageBox.Show("Por favor, llene todos los campos", "Ups! Cuidado", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+            else
+            {
+                //Se tiene q autogenerar el ID del ticket
+                ticket.IDTicket = ticketServiceLocal.AutogeneradorID();
+                ticket.Subject = subject;
+                ticket.Descripcion = description;
+                ticket.StateProcess = cmbState.SelectedItem != null ? (State)cmbState.SelectedItem : State.Creado;
+                ticket.ActiveState = true;
+                ticket.FechaCreacion = DateTime.Now;
+                ticket.Prioridad = cmbPriority.SelectedItem != null ? (Priority)cmbPriority.SelectedItem : Priority.Baja;
+                ticket.AsignadoA = "Sin Asignar";
+                if (ticket.StateProcess == State.Cerrado)
+                {
+                    ticket.FechaCierre = DateTime.Now;
+                }
+                ticketValid = true;
+
+
+            }
+            try
+            {
+                if (ticketValid)
+                {
+                    TicketCreated?.Invoke(ticket);
+
+                    this.Close();
+
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error al guardar el ticket", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
 
-            TicketCreated?.Invoke(ticket);
-
-            this.Close();
 
         }
+
 
         private void CmpTicketFrm_Load(object sender, EventArgs e)
         {
@@ -57,6 +84,10 @@ namespace OctagonHelpdesk.Formularios
             cmbPriority.Items.Clear();
             cmbPriority.SelectedIndex = -1;
             cmbPriority.DataSource = Enum.GetValues(typeof(Priority));
+
+            txtCreatedBy.Enabled = false;
+            btnAttachments.Enabled = false;
+            cmbAsigned.Enabled = false;
         }
     }
 }
