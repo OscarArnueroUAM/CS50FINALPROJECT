@@ -125,42 +125,8 @@ namespace OctagonHelpdesk
             frame.Show();
         }
 
-        private void departamentoToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            FrmDept frmDept = Application.OpenForms.OfType<FrmDept>().FirstOrDefault();
-            if (frmDept != null)
-            {
-                frmDept.WindowState = FormWindowState.Maximized;
-                frmDept.BringToFront();
-            }
-            else
-            {
-                frmDept = new FrmDept();
-                frmDept.MdiParent = this;
-                frmDept.WindowState = FormWindowState.Minimized;
-                frmDept.Show();
-                frmDept.WindowState = FormWindowState.Maximized;
-            }
+        
 
-        }
-
-        private void rolesToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            FrmRoles frmRoles = Application.OpenForms.OfType<FrmRoles>().FirstOrDefault();
-            if (frmRoles != null)
-            {
-                frmRoles.WindowState = FormWindowState.Maximized;
-                frmRoles.BringToFront();
-            }
-            else
-            {
-                frmRoles = new FrmRoles();
-                frmRoles.MdiParent = this;
-                frmRoles.WindowState = FormWindowState.Minimized;
-                frmRoles.Show();
-                frmRoles.WindowState = FormWindowState.Maximized;
-            }
-
-        }
+        
     }
 }

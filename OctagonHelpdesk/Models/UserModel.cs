@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Security.Cryptography;
 using OctagonHelpdesk.Services;
+using OctagonHelpdesk.Models.Enum;
 
 
 namespace OctagonHelpdesk.Models
@@ -25,7 +26,7 @@ namespace OctagonHelpdesk.Models
         public string Name { get; set; }
         public string Lastname { get; set; }
         public string Email { get; set; }
-        public int IDDept { get; set; }
+        public Departament Departamento { get; set; }
         public DateTime CreationDate { get; set; }
 
 

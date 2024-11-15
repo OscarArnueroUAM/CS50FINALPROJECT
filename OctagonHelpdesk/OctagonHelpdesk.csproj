@@ -67,18 +67,6 @@
     <Compile Include="Formularios\Catalogos\CrearUsuarioForm.Designer.cs">
       <DependentUpon>CrearUsuarioForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Formularios\Catalogos\FrmDept.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Formularios\Catalogos\FrmDept.Designer.cs">
-      <DependentUpon>FrmDept.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Formularios\Catalogos\FrmRoles.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Formularios\Catalogos\FrmRoles.Designer.cs">
-      <DependentUpon>FrmRoles.cs</DependentUpon>
-    </Compile>
     <Compile Include="Formularios\LoginFrm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -126,12 +114,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\Catalogos\CrearUsuarioForm.resx">
       <DependentUpon>CrearUsuarioForm.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Formularios\Catalogos\FrmDept.resx">
-      <DependentUpon>FrmDept.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Formularios\Catalogos\FrmRoles.resx">
-      <DependentUpon>FrmRoles.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\LoginFrm.resx">
       <DependentUpon>LoginFrm.cs</DependentUpon>

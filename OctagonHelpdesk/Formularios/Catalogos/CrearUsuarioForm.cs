@@ -9,6 +9,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using OctagonHelpdesk.Models;
+using OctagonHelpdesk.Models.Enum;
 
 namespace OctagonHelpdesk.Formularios
 {
@@ -23,6 +24,7 @@ namespace OctagonHelpdesk.Formularios
         {
             InitializeComponent();
             usuarioServiceLocal = usuarioService;
+            
         }
 
         private void btnConfirmUserCreation_Click(object sender, EventArgs e)
@@ -33,11 +35,24 @@ namespace OctagonHelpdesk.Formularios
             usuario.Email = tbEmail.Text;
             usuario.CreationDate = DateTime.Now;
             usuario.ActiveStateU = true;
+            usuario.Departamento = (Departament)cmbDepartamento.SelectedItem;
 
             UsuarioCreated?.Invoke(usuario);
 
             this.Close();
 
+        }
+
+        private void CrearUsuarioForm_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void CrearUsuarioForm_Load_1(object sender, EventArgs e)
+        {
+            cmbDepartamento.Items.Clear();
+            cmbDepartamento.SelectedIndex = -1;
+            cmbDepartamento.DataSource = Enum.GetValues(typeof(Departament));
         }
     }
 }

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace OctagonHelpdesk.Models.Enum
 {
-    internal enum Departamento
+    public enum Departament
     {
         Administracion,
         Compras,

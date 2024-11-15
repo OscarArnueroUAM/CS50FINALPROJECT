@@ -56,9 +56,6 @@
             this.usuariosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.testToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip = new System.Windows.Forms.MenuStrip();
-            this.catalogosToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-            this.departamentoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.rolesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.statusStrip.SuspendLayout();
             this.menuStrip.SuspendLayout();
             this.SuspendLayout();
@@ -240,65 +237,39 @@
             // ticketToolStripMenuItem
             // 
             this.ticketToolStripMenuItem.Name = "ticketToolStripMenuItem";
-            this.ticketToolStripMenuItem.Size = new System.Drawing.Size(270, 34);
+            this.ticketToolStripMenuItem.Size = new System.Drawing.Size(182, 34);
             this.ticketToolStripMenuItem.Text = "Tickets";
             this.ticketToolStripMenuItem.Click += new System.EventHandler(this.ticketToolStripMenuItem_Click);
             // 
             // usuariosToolStripMenuItem
             // 
             this.usuariosToolStripMenuItem.Name = "usuariosToolStripMenuItem";
-            this.usuariosToolStripMenuItem.Size = new System.Drawing.Size(270, 34);
+            this.usuariosToolStripMenuItem.Size = new System.Drawing.Size(182, 34);
             this.usuariosToolStripMenuItem.Text = "Usuarios";
             this.usuariosToolStripMenuItem.Click += new System.EventHandler(this.usuariosToolStripMenuItem_Click);
             // 
             // testToolStripMenuItem
             // 
             this.testToolStripMenuItem.Name = "testToolStripMenuItem";
-            this.testToolStripMenuItem.Size = new System.Drawing.Size(270, 34);
+            this.testToolStripMenuItem.Size = new System.Drawing.Size(182, 34);
             this.testToolStripMenuItem.Text = "Test";
             this.testToolStripMenuItem.Click += new System.EventHandler(this.testToolStripMenuItem_Click);
             // 
             // menuStrip
             // 
             this.menuStrip.AutoSize = false;
-            this.menuStrip.GripMargin = new System.Windows.Forms.Padding(2, 2, 0, 2);
             this.menuStrip.ImageScalingSize = new System.Drawing.Size(24, 24);
             this.menuStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.fileMenu,
             this.helpMenu,
-            this.catalogosToolStripMenuItem,
-            this.catalogosToolStripMenuItem1});
+            this.catalogosToolStripMenuItem});
             this.menuStrip.LayoutStyle = System.Windows.Forms.ToolStripLayoutStyle.Flow;
             this.menuStrip.Location = new System.Drawing.Point(0, 0);
             this.menuStrip.Name = "menuStrip";
-            this.menuStrip.Padding = new System.Windows.Forms.Padding(6, 2, 0, 2);
             this.menuStrip.Size = new System.Drawing.Size(1836, 37);
             this.menuStrip.Stretch = false;
             this.menuStrip.TabIndex = 0;
             this.menuStrip.Text = "MenuStrip";
-            // 
-            // catalogosToolStripMenuItem1
-            // 
-            this.catalogosToolStripMenuItem1.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.departamentoToolStripMenuItem,
-            this.rolesToolStripMenuItem});
-            this.catalogosToolStripMenuItem1.Name = "catalogosToolStripMenuItem1";
-            this.catalogosToolStripMenuItem1.Size = new System.Drawing.Size(108, 29);
-            this.catalogosToolStripMenuItem1.Text = "Catalogos";
-            // 
-            // departamentoToolStripMenuItem
-            // 
-            this.departamentoToolStripMenuItem.Name = "departamentoToolStripMenuItem";
-            this.departamentoToolStripMenuItem.Size = new System.Drawing.Size(270, 34);
-            this.departamentoToolStripMenuItem.Text = "Departamentos";
-            this.departamentoToolStripMenuItem.Click += new System.EventHandler(this.departamentoToolStripMenuItem_Click);
-            // 
-            // rolesToolStripMenuItem
-            // 
-            this.rolesToolStripMenuItem.Name = "rolesToolStripMenuItem";
-            this.rolesToolStripMenuItem.Size = new System.Drawing.Size(270, 34);
-            this.rolesToolStripMenuItem.Text = "Roles de Usuarios";
-            this.rolesToolStripMenuItem.Click += new System.EventHandler(this.rolesToolStripMenuItem_Click);
             // 
             // MdiParentFrm
             // 
@@ -350,9 +321,6 @@
         private System.Windows.Forms.ToolStripMenuItem usuariosToolStripMenuItem;
         private System.Windows.Forms.MenuStrip menuStrip;
         private System.Windows.Forms.ToolStripMenuItem testToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem catalogosToolStripMenuItem1;
-        private System.Windows.Forms.ToolStripMenuItem departamentoToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem rolesToolStripMenuItem;
     }
 }
 
