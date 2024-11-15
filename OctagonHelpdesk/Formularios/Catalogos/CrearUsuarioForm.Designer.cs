@@ -32,13 +32,15 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.cmbDepartamento = new System.Windows.Forms.ComboBox();
+            this.cbEmpleado = new System.Windows.Forms.CheckBox();
+            this.cbIT = new System.Windows.Forms.CheckBox();
+            this.cbAdmin = new System.Windows.Forms.CheckBox();
             this.btnConfirmUserCreation = new System.Windows.Forms.Button();
             this.tbIDUser = new System.Windows.Forms.TextBox();
             this.tbName = new System.Windows.Forms.TextBox();
             this.tbEmail = new System.Windows.Forms.TextBox();
-            this.tbIDDept = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
-            this.cmbRole = new System.Windows.Forms.ComboBox();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -70,13 +72,15 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.cmbDepartamento);
+            this.groupBox1.Controls.Add(this.cbEmpleado);
+            this.groupBox1.Controls.Add(this.cbIT);
+            this.groupBox1.Controls.Add(this.cbAdmin);
             this.groupBox1.Controls.Add(this.btnConfirmUserCreation);
             this.groupBox1.Controls.Add(this.tbIDUser);
             this.groupBox1.Controls.Add(this.tbName);
             this.groupBox1.Controls.Add(this.tbEmail);
-            this.groupBox1.Controls.Add(this.tbIDDept);
             this.groupBox1.Controls.Add(this.label6);
-            this.groupBox1.Controls.Add(this.cmbRole);
             this.groupBox1.Controls.Add(this.label5);
             this.groupBox1.Controls.Add(this.label4);
             this.groupBox1.Controls.Add(this.label3);
@@ -87,10 +91,49 @@
             this.groupBox1.TabIndex = 2;
             this.groupBox1.TabStop = false;
             // 
+            // cmbDepartamento
+            // 
+            this.cmbDepartamento.FormattingEnabled = true;
+            this.cmbDepartamento.Location = new System.Drawing.Point(282, 241);
+            this.cmbDepartamento.Name = "cmbDepartamento";
+            this.cmbDepartamento.Size = new System.Drawing.Size(135, 28);
+            this.cmbDepartamento.TabIndex = 14;
+            this.cmbDepartamento.Text = "...";
+            // 
+            // cbEmpleado
+            // 
+            this.cbEmpleado.AutoSize = true;
+            this.cbEmpleado.Location = new System.Drawing.Point(509, 306);
+            this.cbEmpleado.Name = "cbEmpleado";
+            this.cbEmpleado.Size = new System.Drawing.Size(107, 24);
+            this.cbEmpleado.TabIndex = 13;
+            this.cbEmpleado.Text = "Empleado";
+            this.cbEmpleado.UseVisualStyleBackColor = true;
+            // 
+            // cbIT
+            // 
+            this.cbIT.AutoSize = true;
+            this.cbIT.Location = new System.Drawing.Point(382, 306);
+            this.cbIT.Name = "cbIT";
+            this.cbIT.Size = new System.Drawing.Size(108, 24);
+            this.cbIT.TabIndex = 12;
+            this.cbIT.Text = "Tecnico IT";
+            this.cbIT.UseVisualStyleBackColor = true;
+            // 
+            // cbAdmin
+            // 
+            this.cbAdmin.AutoSize = true;
+            this.cbAdmin.Location = new System.Drawing.Point(282, 306);
+            this.cbAdmin.Name = "cbAdmin";
+            this.cbAdmin.Size = new System.Drawing.Size(80, 24);
+            this.cbAdmin.TabIndex = 11;
+            this.cbAdmin.Text = "Admin";
+            this.cbAdmin.UseVisualStyleBackColor = true;
+            // 
             // btnConfirmUserCreation
             // 
             this.btnConfirmUserCreation.BackColor = System.Drawing.Color.CornflowerBlue;
-            this.btnConfirmUserCreation.Location = new System.Drawing.Point(320, 373);
+            this.btnConfirmUserCreation.Location = new System.Drawing.Point(307, 388);
             this.btnConfirmUserCreation.Name = "btnConfirmUserCreation";
             this.btnConfirmUserCreation.Size = new System.Drawing.Size(168, 66);
             this.btnConfirmUserCreation.TabIndex = 10;
@@ -101,7 +144,7 @@
             // tbIDUser
             // 
             this.tbIDUser.BackColor = System.Drawing.SystemColors.InactiveBorder;
-            this.tbIDUser.Location = new System.Drawing.Point(250, 37);
+            this.tbIDUser.Location = new System.Drawing.Point(282, 37);
             this.tbIDUser.Name = "tbIDUser";
             this.tbIDUser.Size = new System.Drawing.Size(334, 26);
             this.tbIDUser.TabIndex = 0;
@@ -109,7 +152,7 @@
             // tbName
             // 
             this.tbName.BackColor = System.Drawing.SystemColors.InactiveBorder;
-            this.tbName.Location = new System.Drawing.Point(250, 105);
+            this.tbName.Location = new System.Drawing.Point(282, 105);
             this.tbName.Name = "tbName";
             this.tbName.Size = new System.Drawing.Size(334, 26);
             this.tbName.TabIndex = 2;
@@ -117,47 +160,30 @@
             // tbEmail
             // 
             this.tbEmail.BackColor = System.Drawing.SystemColors.InactiveBorder;
-            this.tbEmail.Location = new System.Drawing.Point(250, 172);
+            this.tbEmail.Location = new System.Drawing.Point(282, 175);
             this.tbEmail.Name = "tbEmail";
             this.tbEmail.Size = new System.Drawing.Size(334, 26);
             this.tbEmail.TabIndex = 3;
-            // 
-            // tbIDDept
-            // 
-            this.tbIDDept.BackColor = System.Drawing.SystemColors.InactiveBorder;
-            this.tbIDDept.Location = new System.Drawing.Point(252, 240);
-            this.tbIDDept.Name = "tbIDDept";
-            this.tbIDDept.Size = new System.Drawing.Size(334, 26);
-            this.tbIDDept.TabIndex = 4;
             // 
             // label6
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Segoe UI", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(210, 306);
+            this.label6.Location = new System.Drawing.Point(177, 298);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(36, 21);
+            this.label6.Size = new System.Drawing.Size(76, 21);
             this.label6.TabIndex = 5;
-            this.label6.Text = "Rol:";
-            // 
-            // cmbRole
-            // 
-            this.cmbRole.BackColor = System.Drawing.SystemColors.InactiveBorder;
-            this.cmbRole.FormattingEnabled = true;
-            this.cmbRole.Location = new System.Drawing.Point(250, 303);
-            this.cmbRole.Name = "cmbRole";
-            this.cmbRole.Size = new System.Drawing.Size(334, 28);
-            this.cmbRole.TabIndex = 5;
+            this.label6.Text = "Permisos:";
             // 
             // label5
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Segoe UI", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(99, 240);
+            this.label5.Location = new System.Drawing.Point(149, 243);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(151, 21);
+            this.label5.Size = new System.Drawing.Size(113, 21);
             this.label5.TabIndex = 3;
-            this.label5.Text = "ID de departamento:";
+            this.label5.Text = "Departamento:";
             // 
             // label4
             // 
@@ -200,6 +226,7 @@
             this.Controls.Add(this.pictureBox1);
             this.Name = "CrearUsuarioForm";
             this.Text = "Campos Usuario";
+            this.Load += new System.EventHandler(this.CrearUsuarioForm_Load_1);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
@@ -218,11 +245,13 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.ComboBox cmbRole;
         private System.Windows.Forms.Button btnConfirmUserCreation;
         private System.Windows.Forms.TextBox tbIDUser;
         private System.Windows.Forms.TextBox tbName;
         private System.Windows.Forms.TextBox tbEmail;
-        private System.Windows.Forms.TextBox tbIDDept;
+        private System.Windows.Forms.ComboBox cmbDepartamento;
+        private System.Windows.Forms.CheckBox cbEmpleado;
+        private System.Windows.Forms.CheckBox cbIT;
+        private System.Windows.Forms.CheckBox cbAdmin;
     }
 }
