@@ -1,4 +1,5 @@
-﻿using System;
+﻿using OctagonHelpdesk.Models.Enum;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -15,7 +16,8 @@ namespace OctagonHelpdesk.Models
         public string Descripcion { get; set; }
         public DateTime FechaCreacion { get; set; }
         public DateTime FechaCierre { get; set; }
-        public string State { get; set; }
+        public State StateProcess { get; set; }
+        public Priority Prioridad { get; set; }
         public string AsignadoA { get; set; }
 
 
