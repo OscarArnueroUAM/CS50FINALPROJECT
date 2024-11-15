@@ -53,6 +53,7 @@
             this.pictureBox1.Location = new System.Drawing.Point(-4, -31);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(87, 612);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
@@ -88,41 +89,46 @@
             // 
             // btnConfirmUserCreation
             // 
-            this.btnConfirmUserCreation.Location = new System.Drawing.Point(327, 385);
+            this.btnConfirmUserCreation.BackColor = System.Drawing.Color.CornflowerBlue;
+            this.btnConfirmUserCreation.Location = new System.Drawing.Point(320, 373);
             this.btnConfirmUserCreation.Name = "btnConfirmUserCreation";
-            this.btnConfirmUserCreation.Size = new System.Drawing.Size(152, 48);
+            this.btnConfirmUserCreation.Size = new System.Drawing.Size(168, 66);
             this.btnConfirmUserCreation.TabIndex = 10;
             this.btnConfirmUserCreation.Text = "Confirmar";
-            this.btnConfirmUserCreation.UseVisualStyleBackColor = true;
+            this.btnConfirmUserCreation.UseVisualStyleBackColor = false;
             this.btnConfirmUserCreation.Click += new System.EventHandler(this.btnConfirmUserCreation_Click);
             // 
             // tbIDUser
             // 
+            this.tbIDUser.BackColor = System.Drawing.SystemColors.InactiveBorder;
             this.tbIDUser.Location = new System.Drawing.Point(250, 37);
             this.tbIDUser.Name = "tbIDUser";
             this.tbIDUser.Size = new System.Drawing.Size(334, 26);
-            this.tbIDUser.TabIndex = 9;
+            this.tbIDUser.TabIndex = 0;
             // 
             // tbName
             // 
+            this.tbName.BackColor = System.Drawing.SystemColors.InactiveBorder;
             this.tbName.Location = new System.Drawing.Point(250, 105);
             this.tbName.Name = "tbName";
             this.tbName.Size = new System.Drawing.Size(334, 26);
-            this.tbName.TabIndex = 8;
+            this.tbName.TabIndex = 2;
             // 
             // tbEmail
             // 
+            this.tbEmail.BackColor = System.Drawing.SystemColors.InactiveBorder;
             this.tbEmail.Location = new System.Drawing.Point(250, 172);
             this.tbEmail.Name = "tbEmail";
             this.tbEmail.Size = new System.Drawing.Size(334, 26);
-            this.tbEmail.TabIndex = 7;
+            this.tbEmail.TabIndex = 3;
             // 
             // tbIDDept
             // 
+            this.tbIDDept.BackColor = System.Drawing.SystemColors.InactiveBorder;
             this.tbIDDept.Location = new System.Drawing.Point(252, 240);
             this.tbIDDept.Name = "tbIDDept";
             this.tbIDDept.Size = new System.Drawing.Size(334, 26);
-            this.tbIDDept.TabIndex = 6;
+            this.tbIDDept.TabIndex = 4;
             // 
             // label6
             // 
@@ -136,11 +142,12 @@
             // 
             // cmbRole
             // 
+            this.cmbRole.BackColor = System.Drawing.SystemColors.InactiveBorder;
             this.cmbRole.FormattingEnabled = true;
             this.cmbRole.Location = new System.Drawing.Point(250, 303);
             this.cmbRole.Name = "cmbRole";
             this.cmbRole.Size = new System.Drawing.Size(334, 28);
-            this.cmbRole.TabIndex = 4;
+            this.cmbRole.TabIndex = 5;
             // 
             // label5
             // 
@@ -186,7 +193,8 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(900, 563);
+            this.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
+            this.ClientSize = new System.Drawing.Size(898, 562);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.pictureBox1);

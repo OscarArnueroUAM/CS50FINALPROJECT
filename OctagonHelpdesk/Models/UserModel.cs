@@ -61,5 +61,13 @@ namespace OctagonHelpdesk.Models
             //To do, stop being gay. PD: I love u Mario Cricket
             return HelperPassword.VerifyPassword(password, EncryptedPassword);
         }
+
+
+        public void MassFill(int IDuser,bool state, string password)
+        {
+            this.IDUser = IDuser;
+            this.ActiveStateU = state;
+            this.SetPassword(password,true);
+        }
     }
 }
