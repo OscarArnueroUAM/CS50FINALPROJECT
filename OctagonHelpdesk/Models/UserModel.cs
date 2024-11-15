@@ -57,6 +57,8 @@ namespace OctagonHelpdesk.Models
 
         public bool ChecKPassword(string password)
         {
+            //To do, Code a way Retrieve Hashed password from wherever we store it in and compare it -M
+            //To do, stop being gay. PD: I love u Mario Cricket
             return HelperPassword.VerifyPassword(password, EncryptedPassword);
         }
 
