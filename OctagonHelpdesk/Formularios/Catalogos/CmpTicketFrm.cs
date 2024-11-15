@@ -1,4 +1,5 @@
 ﻿using OctagonHelpdesk.Models;
+using OctagonHelpdesk.Models.Enum;
 using OctagonHelpdesk.Services;
 using System;
 using System.Collections.Generic;
@@ -31,15 +32,31 @@ namespace OctagonHelpdesk.Formularios
             ticket.IDTicket = ticketServiceLocal.AutogeneradorID();
             ticket.Subject = txtSubject.Text;
             ticket.Descripcion = txtDescription.Text;
-            ticket.State = "Abierto";
+            ticket.StateProcess = cmbState.SelectedItem != null ? (State)cmbState.SelectedItem : State.Creado;
             ticket.ActiveState = true;
             ticket.FechaCreacion = DateTime.Now;
+            ticket.Prioridad = cmbPriority.SelectedItem != null ? (Priority)cmbPriority.SelectedItem : Priority.Baja;
             ticket.AsignadoA = "Sin Asignar";
+            if (ticket.StateProcess == State.Cerrado)
+            {
+                ticket.FechaCierre = DateTime.Now;
+            }
 
             TicketCreated?.Invoke(ticket);
 
             this.Close();
 
+        }
+
+        private void CmpTicketFrm_Load(object sender, EventArgs e)
+        {
+            cmbState.Items.Clear();
+            cmbState.SelectedIndex = -1;
+            cmbState.DataSource = Enum.GetValues(typeof(State));
+
+            cmbPriority.Items.Clear();
+            cmbPriority.SelectedIndex = -1;
+            cmbPriority.DataSource = Enum.GetValues(typeof(Priority));
         }
     }
 }

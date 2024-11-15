@@ -42,6 +42,8 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.label6 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.cmbPriority = new System.Windows.Forms.ComboBox();
+            this.label7 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -62,7 +64,7 @@
             this.label1.Font = new System.Drawing.Font("Segoe UI", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(51, 86);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(93, 32);
+            this.label1.Size = new System.Drawing.Size(62, 21);
             this.label1.TabIndex = 2;
             this.label1.Text = "Asunto:";
             // 
@@ -80,9 +82,9 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Segoe UI", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(51, 251);
+            this.label4.Location = new System.Drawing.Point(51, 291);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(89, 32);
+            this.label4.Size = new System.Drawing.Size(59, 21);
             this.label4.TabIndex = 4;
             this.label4.Text = "Estado:";
             // 
@@ -90,7 +92,7 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Segoe UI", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(54, 301);
+            this.label5.Location = new System.Drawing.Point(51, 344);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(90, 21);
             this.label5.TabIndex = 5;
@@ -127,7 +129,7 @@
             // 
             this.cmbState.BackColor = System.Drawing.SystemColors.InactiveBorder;
             this.cmbState.FormattingEnabled = true;
-            this.cmbState.Location = new System.Drawing.Point(198, 249);
+            this.cmbState.Location = new System.Drawing.Point(198, 289);
             this.cmbState.Name = "cmbState";
             this.cmbState.Size = new System.Drawing.Size(167, 29);
             this.cmbState.TabIndex = 9;
@@ -137,7 +139,7 @@
             this.cmbAsigned.BackColor = System.Drawing.SystemColors.InactiveBorder;
             this.cmbAsigned.ForeColor = System.Drawing.Color.Black;
             this.cmbAsigned.FormattingEnabled = true;
-            this.cmbAsigned.Location = new System.Drawing.Point(198, 301);
+            this.cmbAsigned.Location = new System.Drawing.Point(198, 341);
             this.cmbAsigned.Name = "cmbAsigned";
             this.cmbAsigned.Size = new System.Drawing.Size(167, 29);
             this.cmbAsigned.TabIndex = 10;
@@ -145,7 +147,7 @@
             // btnSave
             // 
             this.btnSave.BackColor = System.Drawing.Color.CornflowerBlue;
-            this.btnSave.Location = new System.Drawing.Point(105, 377);
+            this.btnSave.Location = new System.Drawing.Point(105, 413);
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(146, 54);
             this.btnSave.TabIndex = 11;
@@ -156,7 +158,7 @@
             // btnDelete
             // 
             this.btnDelete.BackColor = System.Drawing.Color.CornflowerBlue;
-            this.btnDelete.Location = new System.Drawing.Point(398, 377);
+            this.btnDelete.Location = new System.Drawing.Point(398, 413);
             this.btnDelete.Name = "btnDelete";
             this.btnDelete.Size = new System.Drawing.Size(146, 54);
             this.btnDelete.TabIndex = 13;
@@ -166,6 +168,8 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
+            this.panel1.Controls.Add(this.cmbPriority);
+            this.panel1.Controls.Add(this.label7);
             this.panel1.Controls.Add(this.txtCreatedBy);
             this.panel1.Controls.Add(this.btnDelete);
             this.panel1.Controls.Add(this.btnSave);
@@ -180,7 +184,7 @@
             this.panel1.Controls.Add(this.label5);
             this.panel1.Location = new System.Drawing.Point(188, 93);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(672, 461);
+            this.panel1.Size = new System.Drawing.Size(672, 499);
             this.panel1.TabIndex = 14;
             // 
             // label6
@@ -205,6 +209,25 @@
             this.pictureBox1.TabIndex = 17;
             this.pictureBox1.TabStop = false;
             // 
+            // cmbPriority
+            // 
+            this.cmbPriority.BackColor = System.Drawing.SystemColors.InactiveBorder;
+            this.cmbPriority.FormattingEnabled = true;
+            this.cmbPriority.Location = new System.Drawing.Point(198, 230);
+            this.cmbPriority.Name = "cmbPriority";
+            this.cmbPriority.Size = new System.Drawing.Size(167, 29);
+            this.cmbPriority.TabIndex = 15;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Segoe UI", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Location = new System.Drawing.Point(51, 232);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(116, 32);
+            this.label7.TabIndex = 14;
+            this.label7.Text = "Prioridad:";
+            // 
             // CmpTicketFrm
             // 
             this.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
@@ -215,6 +238,7 @@
             this.Font = new System.Drawing.Font("Segoe UI", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Name = "CmpTicketFrm";
             this.Text = "Campos Ticket";
+            this.Load += new System.EventHandler(this.CmpTicketFrm_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
@@ -238,5 +262,7 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.ComboBox cmbPriority;
+        private System.Windows.Forms.Label label7;
     }
 }
