@@ -31,7 +31,8 @@ namespace OctagonHelpdesk.Services
         {
             usuarios.Add(usuario);
         }
-        public void RemoveUsuario(UserModel LoggedUser,UserModel usuario)
+        //public void RemoveUsuario(UserModel LoggedUser,UserModel usuario)
+        public void RemoveUsuario(UserModel usuario)
         {
             int position = FindPosition(usuario.IDUser);
             usuarios[position].ActiveStateU = false;

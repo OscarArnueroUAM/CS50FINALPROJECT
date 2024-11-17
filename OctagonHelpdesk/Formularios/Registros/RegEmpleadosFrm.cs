@@ -17,7 +17,7 @@ namespace OctagonHelpdesk.Formularios
     public partial class RegEmpleadosFrm : Form
     {
         public UsuarioService usuarios = new UsuarioService();
-        public UserModel usuarioSel = new UserModel();
+      
         public RegEmpleadosFrm()
         {
             InitializeComponent();
@@ -58,7 +58,10 @@ namespace OctagonHelpdesk.Formularios
             var result = MessageBox.Show("¿Seguro que deseas eliminar este registro?", "Confirmación", MessageBoxButtons.YesNo);
             if (result == DialogResult.Yes)
             {
-                bindingSource1.RemoveCurrent(); // Solo elimina si el usuario confirma.
+                usuarios.RemoveUsuario(SelectedRow());
+            MessageBox.Show("El registro fue eliminado.", "Operación exitosa", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                bindingSource1.ResetBindings(false);
+
             }
             else
             {
@@ -69,6 +72,15 @@ namespace OctagonHelpdesk.Formularios
         //Cuando se da doble clic en un registro, se selecciona y se envía a la ventana de edición
         private void DgvRegUsuarios_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
+            
+            if (SelectedRow() != null)
+            {
+                EditarUsuario(SelectedRow());
+            }
+        }
+        public UserModel SelectedRow()
+        {
+            UserModel usuarioSel = new UserModel();
             DataGridViewRow row = DgvRegUsuarios.CurrentRow;
             if (row != null)
             {
@@ -76,12 +88,15 @@ namespace OctagonHelpdesk.Formularios
                 usuarioSel.IDUser = Convert.ToInt32(row.Cells[0].Value);
                 usuarioSel = usuarios.GetUsuario(usuarioSel.IDUser);
 
-                EditarUsuario();
+                return usuarioSel;
             }
+            return null;
+
+
         }
 
         //Envio los datos y llamo a un nuevo evento para la edición
-        public void EditarUsuario()
+        public void EditarUsuario(UserModel usuarioSel)
         {
             CrearUsuarioForm formEmpleado = new CrearUsuarioForm(usuarios, usuarioSel);
             formEmpleado.UsuarioCreated += OnUsuarioCreated;
