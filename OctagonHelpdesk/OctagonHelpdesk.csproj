@@ -143,6 +143,8 @@
       <DesignTime>True</DesignTime>
     </Compile>
     <None Include="packages.config" />
+    <None Include="Properties\DataSources\OctagonHelpdesk.Models.UserModel.datasource" />
+    <None Include="Properties\DataSources\OctagonHelpdesk.Services.UsuarioService.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -157,6 +159,7 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="Dao\" />
     <Folder Include="Data\Images\" />
   </ItemGroup>
   <ItemGroup>

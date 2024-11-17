@@ -11,7 +11,7 @@ namespace OctagonHelpdesk.Services
 {
     public class UsuarioService
     {
-        private List<UserModel> Usuarios = new List<UserModel>();
+        private List<UserModel> usuarios = new List<UserModel>();
         
         public UsuarioService() 
         {
@@ -29,36 +29,41 @@ namespace OctagonHelpdesk.Services
 
         public void AddUsuario(UserModel usuario)
         {
-            Usuarios.Add(usuario);
+            usuarios.Add(usuario);
         }
         public void RemoveUsuario(UserModel LoggedUser,UserModel usuario)
         {
             int position = FindPosition(usuario.IDUser);
-            Usuarios[position].ActiveStateU = false;
+            usuarios[position].ActiveStateU = false;
 
         }
         public void UpdateUsuario(UserModel usuario)
         {
             int position = FindPosition(usuario.IDUser);
-            Usuarios[position] = usuario;
+            usuarios[position] = usuario;
         }
 
         public List<UserModel> GetUsuarios()
         {
-            return Usuarios;
+            return usuarios;
+        }
+
+        public UserModel GetUsuario(int id)
+        {
+            return usuarios.Find(usuario => usuario.IDUser == id);
         }
 
         public int AutogeneradorID()
         {
-            if (Usuarios.Count == 0)
+            if (usuarios.Count == 0)
             {
                 return 1;
             }
-            return Usuarios.Last().IDUser + 1;
+            return usuarios.Last().IDUser + 1;
         }
         public int FindPosition(int id)
         {
-            return Usuarios.FindIndex(usuario => usuario.IDUser == id);
+            return usuarios.FindIndex(usuario => usuario.IDUser == id);
 
         }
 
@@ -72,11 +77,11 @@ namespace OctagonHelpdesk.Services
             }
             catch { }
             
-            for (int i = 0; i < Usuarios.Count; i++)
+            for (int i = 0; i < usuarios.Count; i++)
             {
-                if ((ID == Usuarios[i].IDUser)&&ID != 0) 
+                if ((ID == usuarios[i].IDUser)&&ID != 0) 
                 { 
-                    if (Usuarios[i].ChecKPassword(password))
+                    if (usuarios[i].ChecKPassword(password))
                     {
                         return true;
                     }
