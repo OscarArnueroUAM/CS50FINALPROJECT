@@ -10,6 +10,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using OctagonHelpdesk.Models;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement.TrackBar;
+using OctagonHelpdesk.Models.Enum;
 
 namespace OctagonHelpdesk.Formularios
 {
@@ -25,40 +26,76 @@ namespace OctagonHelpdesk.Formularios
 
         private void InitializeBinding()
         {
-            bindingSource1.DataSource = usuarios.GetUsuarios();
-            DgvRegUsuarios.DataSource = bindingSource1;
-            bindingNavigator1.BindingSource = bindingSource1;
-            // Manejar el evento AddingNew para evitar la creación automática de nuevos elementos
-            // Deshabilitar el comportamiento predeterminado del botón de eliminar
-            // Manejar el evento Deleting para mostrar un MessageBox de confirmación
-
-        }
-        private void BtnCrearEmpleado_Click(object sender, EventArgs e)
-        {
             
-            MostrarUsuarios();
+            DgvRegUsuarios.DataSource = bindingSource1;
+            bindingSource1.DataSource = usuarios.GetUsuarios();
         }
+
+        //Cada que se guarda un usuario, se analiza, guarda y actualiza en la lista de usuarios
         private void OnUsuarioCreated(UserModel usuario)
         {
-            usuarios.AddUsuario(usuario);
-            bindingSource1.ResetBindings(false);
-        }
-        private void MostrarUsuarios()
-        {
-            DgvRegUsuarios.DataSource = null;
-            DgvRegUsuarios.DataSource = usuarios.GetUsuarios();
+            int indexUsuario = usuarios.FindPosition(usuario.IDUser); // Busca la posición del usuario en la lista
+            
+            if (indexUsuario != -1) //Si el usuario ya existe, se actualiza
+            {
+                usuarios.UpdateUsuario(usuario);
+
+            }
+            else
+            {
+                usuarios.AddUsuario(usuario); //Si no existe, se agrega
+            }
+            bindingSource1.ResetBindings(false); // Actualiza el DataGridView
         }
 
+        //Botones de la barra de herramientas, Agrega un registro
         private void bindingNavigatorAddNewItem_Click(object sender, EventArgs e)
         {
-            
+            CrearUsuario();
+        }
+        private void bindingNavigatorDeleteItem_Click(object sender, EventArgs e)
+        {
+            var result = MessageBox.Show("¿Seguro que deseas eliminar este registro?", "Confirmación", MessageBoxButtons.YesNo);
+            if (result == DialogResult.Yes)
+            {
+                bindingSource1.RemoveCurrent(); // Solo elimina si el usuario confirma.
+            }
+            else
+            {
+                MessageBox.Show("El registro no fue eliminado.", "Operación cancelada");
+            }
         }
 
-        private void bindingSource1_AddingNew(object sender, AddingNewEventArgs e)
+        //Cuando se da doble clic en un registro, se selecciona y se envía a la ventana de edición
+        private void DgvRegUsuarios_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            DataGridViewRow row = DgvRegUsuarios.CurrentRow;
+            if (row != null)
+            {
+                //Tomo los datos del usuario segun la fila seleccionada
+                usuarioSel.IDUser = Convert.ToInt32(row.Cells[0].Value);
+                usuarioSel = usuarios.GetUsuario(usuarioSel.IDUser);
+
+                EditarUsuario();
+            }
+        }
+
+        //Envio los datos y llamo a un nuevo evento para la edición
+        public void EditarUsuario()
+        {
+            CrearUsuarioForm formEmpleado = new CrearUsuarioForm(usuarios, usuarioSel);
+            formEmpleado.UsuarioCreated += OnUsuarioCreated;
+            formEmpleado.ShowDialog();
+        }
+
+        //Envio los datos y llamo a un nuevo evento para la creación
+        public void CrearUsuario()
         {
             CrearUsuarioForm formEmpleado = new CrearUsuarioForm(usuarios);
             formEmpleado.UsuarioCreated += OnUsuarioCreated;
             formEmpleado.ShowDialog();
         }
+
+       
     }
 }
